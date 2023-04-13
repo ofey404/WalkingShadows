@@ -17,4 +17,9 @@ repos:
       - id: go-sec-mod
       - id: go-build-mod
       - id: go-test-mod
-
+  - repo: https://github.com/Lucas-C/pre-commit-hooks-nodejs
+    rev: v1.1.2
+    hooks:
+    -   id: markdown-toc
+        # optional custom config:
+        args: [--indent, "    ", -i]

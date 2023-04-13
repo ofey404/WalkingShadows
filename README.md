@@ -8,3 +8,7 @@ This repository reproduces Stanford's article:
 > and then is heard no more:
 > it is a tale told by an idiot, full of sound and fury,
 > signifying nothing.
+
+## Paper takeaways
+
+They are written under [Markmap | Visualize your markdown in VSCode](https://marketplace.visualstudio.com/items?itemName=gera2ld.markmap-vscode).
