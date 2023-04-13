@@ -1,7 +1,17 @@
 load("@rules_python//python:defs.bzl", "py_binary")
+load("@io_bazel_rules_docker//python3:image.bzl", "py3_image")
 
 py_binary(
     name = "src_bin",
+    srcs = ["__main__.py"],
+    imports = [".."],
+    main = "__main__.py",
+    visibility = ["//:__subpackages__"],
+    deps = ["@pip//numpy"],
+)
+
+py3_image(
+    name = "src_image",
     srcs = ["__main__.py"],
     imports = [".."],
     main = "__main__.py",

@@ -27,3 +27,18 @@ Those markdown files are written under [Markmap | Visualize your markdown in VSC
 
 - [./article_takeaway.md](./article_takeaway.md)
 - [./prompt_engineering_takeaway.md](./prompt_engineering_takeaway.md)
+
+## Build System
+
+This project uses [Bazel](https://bazel.build/) as its build system.
+I'd like to try out its test caching feature for python.
+
+Commands:
+
+```bash
+ bazel run //src:src_bin
+
+./scripts/update_bazel_build.sh
+
+./scripts/build_image.sh
+```

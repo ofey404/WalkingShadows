@@ -44,3 +44,7 @@ load("@pip//:requirements.bzl", "install_deps")
 
 # Initialize repositories for all packages in requirements_lock.txt.
 install_deps()
+
+load("//:bazel/docker_setup.bzl", "docker_setup")
+
+docker_setup()
