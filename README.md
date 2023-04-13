@@ -9,6 +9,21 @@ This repository reproduces Stanford's article:
 > it is a tale told by an idiot, full of sound and fury,
 > signifying nothing.
 
-## Paper takeaways
+## Goal & Roadmap
 
-They are written under [Markmap | Visualize your markdown in VSCode](https://marketplace.visualstudio.com/items?itemName=gera2ld.markmap-vscode).
+Goal:
+
+1. Reproduce the article.
+2. Write it in business quality, battle-tested python.
+
+Roadmap:
+
+- [ ] Create a style guide, based on langchain package.
+- [ ] Implement a baby level memory stream.
+
+## Takeaways of my reading materials
+
+Those markdown files are written under [Markmap | Visualize your markdown in VSCode](https://marketplace.visualstudio.com/items?itemName=gera2ld.markmap-vscode).
+
+- [./article_takeaway.md](./article_takeaway.md)
+- [./prompt_engineering_takeaway.md](./prompt_engineering_takeaway.md)

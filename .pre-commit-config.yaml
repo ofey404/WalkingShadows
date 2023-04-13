@@ -23,3 +23,11 @@ repos:
     hooks:
     - id: markdownlint
     - id: markdownlint-fix
+
+  - repo: local
+    hooks:
+      - id: update-bazel-build
+        name: update bazel build
+        entry: ./scripts/update_bazel_build.sh
+        files: 'src/.*\.py$'
+        language: system
