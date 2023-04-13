@@ -25,5 +25,3 @@
 - Update the plan
 - Dialogue
   - retrieve and summarize related memory
-
-
