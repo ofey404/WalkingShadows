@@ -18,6 +18,7 @@ Goal:
 
 Roadmap:
 
+- [x] Project structure and build system.
 - [ ] Create a style guide, based on langchain package.
 - [ ] Implement a baby level memory stream.
 
@@ -25,8 +26,8 @@ Roadmap:
 
 Those markdown files are written under [Markmap | Visualize your markdown in VSCode](https://marketplace.visualstudio.com/items?itemName=gera2ld.markmap-vscode).
 
-- [./article_takeaway.md](./article_takeaway.md)
-- [./prompt_engineering_takeaway.md](./prompt_engineering_takeaway.md)
+- [./docs/article_takeaway.md](./docs/article_takeaway.md)
+- [./docs/prompt_engineering_takeaway.md](./docs/prompt_engineering_takeaway.md)
 
 ## Build System
 
