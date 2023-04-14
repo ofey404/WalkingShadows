@@ -1,10 +1,9 @@
 repos:
-  - repo: https://github.com/pre-commit/mirrors-yapf
-    rev: v0.32.0
+  - repo: https://github.com/psf/black
+    rev: 23.3.0
     hooks:
-      - id: yapf
-        name: yapf formatter
-        args: ["--style=.style.yapf", "--parallel", "--in-place"]
+    - id: black
+      language_version: python3.10
 
   - repo: https://github.com/tekwizely/pre-commit-golang
     rev: v1.0.0-beta.4
