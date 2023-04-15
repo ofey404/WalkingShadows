@@ -6,8 +6,8 @@ It begins with a checklist, then detailed records
 in reverse chronological order.
 
 - [x] Project structure and build system.
+- [ ] Grab what we want from Phaser game engine.
 - [ ] Implement 0.1 version: a philosopher in the cave
-- [ ] Get familiar with the Phaser game engine.
 - [ ] Create a style guide, based on langchain package.
 - [ ] Use bazel/gazelle for js.
 - [ ] Implement a baby level memory stream.
@@ -28,6 +28,6 @@ Content:
 
 ## Phaser game engine
 
-<https://github.com/photonstorm/phaser>
-
-Bazel for nodejs: <https://github.com/benchsci/rules_nodejs_gazelle>
+- Github: <https://github.com/photonstorm/phaser>
+- Bazel for nodejs: <https://github.com/benchsci/rules_nodejs_gazelle>
+- Grab what we want from: <http://labs.phaser.io/>
