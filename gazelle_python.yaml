@@ -110,6 +110,11 @@ manifest:
     flask.typing: Flask
     flask.views: Flask
     flask.wrappers: Flask
+    flask_cors: Flask_Cors
+    flask_cors.core: Flask_Cors
+    flask_cors.decorator: Flask_Cors
+    flask_cors.extension: Flask_Cors
+    flask_cors.version: Flask_Cors
     idna: idna
     idna.codec: idna
     idna.compat: idna
@@ -184,6 +189,7 @@ manifest:
     requests.status_codes: requests
     requests.structures: requests
     requests.utils: requests
+    six: six
     swagger_ui_bundle: swagger_ui_bundle
     urllib3: urllib3
     urllib3.connection: urllib3
@@ -277,4 +283,4 @@ manifest:
   pip_repository:
     name: pip
     use_pip_repository_aliases: true
-integrity: 691e8846adebbac7e9aa6ba954e55a862548034e99345e40570f3a4fa62ba5c0
+integrity: 23852cde65be8cfb2d2c201ce71cc89798a8fb7f287e917aace62b7bd03ed06c

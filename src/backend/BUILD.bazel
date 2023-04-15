@@ -11,6 +11,7 @@ py_library(
     deps = [
         "@pip//connexion",
         "@pip//flask",
+        "@pip//flask_cors",
     ],
 )
 

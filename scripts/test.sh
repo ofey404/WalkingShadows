@@ -7,4 +7,4 @@ PROJECT_ROOT="${SCRIPT_DIR}/.."
 
 cd "$PROJECT_ROOT"
 
-bazel test //src/backend/...
+bazel test //src/backend/... --test_output=errors

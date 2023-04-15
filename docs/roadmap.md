@@ -8,6 +8,10 @@ in reverse chronological order.
 - [x] Project structure and build system.
 - [x] Grab what we want from Phaser game engine.
 - [ ] Implement 0.1 version: a philosopher in the cave
+  - [x] Connect frontend and backend
+  - [ ] Create a CI
+  - [ ] Connect OpenAI, take langchain into project
+  - [ ] Build feature
 - [ ] Create a style guide, based on langchain package.
 - [ ] Use bazel/gazelle for js.
 - [ ] Implement a baby level memory stream.
