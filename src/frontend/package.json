@@ -10,6 +10,7 @@
   "scripts": {
     "help": "webpack serve --help",
     "dev": "webpack --mode development && webpack serve --mode development --hot",
+    "watch": "webpack --mode development --watch",
     "format": "yarn prettier --write ."
   },
   "dependencies": {

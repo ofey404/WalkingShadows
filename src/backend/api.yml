@@ -1,0 +1,36 @@
+openapi: 3.0.0
+
+info:
+  title: "Walking Shadows REST API"
+  description: "Reproduce Stanford's article: Generative Agents (Arxiv. 2304.03442)"
+  version: 0.0.1
+
+servers:
+  - url: /api
+
+paths:
+  /note:
+    post:
+      operationId: api.note
+      summary: Pass a simple note to philosopher.
+      requestBody:
+        description: ""
+        required: true
+        content:
+          application/json:
+            schema:
+              x-body-name: "note"
+              $ref: "#/components/schemas/Note"
+      responses:
+        "200":
+          description: "Success"
+
+components:
+  schemas:
+    Note:
+      type: object
+      required:
+        - message
+      properties:
+        message:
+          type: string

@@ -6,7 +6,7 @@ It begins with a checklist, then detailed records
 in reverse chronological order.
 
 - [x] Project structure and build system.
-- [ ] Grab what we want from Phaser game engine.
+- [x] Grab what we want from Phaser game engine.
 - [ ] Implement 0.1 version: a philosopher in the cave
 - [ ] Create a style guide, based on langchain package.
 - [ ] Use bazel/gazelle for js.
@@ -31,3 +31,7 @@ Content:
 - Github: <https://github.com/photonstorm/phaser>
 - Bazel for nodejs: <https://github.com/benchsci/rules_nodejs_gazelle>
 - Grab what we want from: <http://labs.phaser.io/>
+
+## Flask
+
+- A good tutorial from Real Python: [Python REST APIs With Flask, Connexion, and SQLAlchemy – Part 1](https://realpython.com/flask-connexion-rest-api/)

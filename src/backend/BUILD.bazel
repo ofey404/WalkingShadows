@@ -1,11 +1,17 @@
-load("@rules_python//python:defs.bzl", "py_binary", "py_library")
+load("@rules_python//python:defs.bzl", "py_binary", "py_library", "py_test")
 
 py_library(
     name = "backend",
-    srcs = ["__init__.py"],
+    srcs = [
+        "__init__.py",
+        "api.py",
+    ],
     imports = ["../.."],
     visibility = ["//:__subpackages__"],
-    deps = ["@pip//pytermgui"],
+    deps = [
+        "@pip//connexion",
+        "@pip//flask",
+    ],
 )
 
 py_binary(
@@ -14,5 +20,13 @@ py_binary(
     imports = ["../.."],
     main = "__main__.py",
     visibility = ["//:__subpackages__"],
+    deps = [":backend"],
+)
+
+py_test(
+    name = "backend_test",
+    srcs = ["__test__.py"],
+    imports = ["../.."],
+    main = "__test__.py",
     deps = [":backend"],
 )
