@@ -1,15 +1,12 @@
-name: Run all tests
+name: Warm up cache - daily run
 
 on:
-  workflow_dispatch:
-  pull_request:
-    paths:
-      - "src/backend/**"
+  schedule:
+    - cron: "0 16 * * *" # Every day at 12 AM GMT+8 (UTC 4 PM)
 
 jobs:
   build:
     name: Build and Test
-    if: github.event.pull_request.draft == false && github.base_ref == 'main'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
