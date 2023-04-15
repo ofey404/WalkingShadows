@@ -18,6 +18,12 @@ Goal:
 
 For roadmap, see [./docs/roadmap.md](./docs/roadmap.md).
 
+For current development status, see [this repo's issue board](https://github.com/ofey404/WalkingShadows/issues).
+
+This is the latest snapshot:
+
+![latest](https://user-images.githubusercontent.com/35857538/232205383-7336028e-156b-4c31-b2bd-46ff5726904d.png)
+
 ## Takeaways of my reading materials
 
 Those markdown files are written under [Markmap | Visualize your markdown in VSCode](https://marketplace.visualstudio.com/items?itemName=gera2ld.markmap-vscode).
@@ -33,9 +39,8 @@ I'd like to try out its test caching feature for python.
 Commands:
 
 ```bash
- bazel run //src:src_bin
-
 ./scripts/update_bazel_build.sh
-
 ./scripts/build_image.sh
+./scripts/run.sh
+./scripts/test.sh
 ```
