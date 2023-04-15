@@ -5,6 +5,33 @@
 
 manifest:
   modules_mapping:
+    attr: attrs
+    attr.converters: attrs
+    attr.exceptions: attrs
+    attr.filters: attrs
+    attr.setters: attrs
+    attr.validators: attrs
+    attrs: attrs
+    attrs.converters: attrs
+    attrs.exceptions: attrs
+    attrs.filters: attrs
+    attrs.setters: attrs
+    attrs.validators: attrs
+    certifi: certifi
+    certifi.core: certifi
+    charset_normalizer: charset_normalizer
+    charset_normalizer.api: charset_normalizer
+    charset_normalizer.assets: charset_normalizer
+    charset_normalizer.cd: charset_normalizer
+    charset_normalizer.cli: charset_normalizer
+    charset_normalizer.cli.normalizer: charset_normalizer
+    charset_normalizer.constant: charset_normalizer
+    charset_normalizer.legacy: charset_normalizer
+    charset_normalizer.md: charset_normalizer
+    charset_normalizer.md__mypyc: charset_normalizer
+    charset_normalizer.models: charset_normalizer
+    charset_normalizer.utils: charset_normalizer
+    charset_normalizer.version: charset_normalizer
     click: click
     click.core: click
     click.decorators: click
@@ -17,6 +44,51 @@ manifest:
     click.testing: click
     click.types: click
     click.utils: click
+    clickclick: clickclick
+    clickclick.console: clickclick
+    connexion: connexion
+    connexion.apis: connexion
+    connexion.apis.abstract: connexion
+    connexion.apis.aiohttp_api: connexion
+    connexion.apis.flask_api: connexion
+    connexion.apis.flask_utils: connexion
+    connexion.apps: connexion
+    connexion.apps.abstract: connexion
+    connexion.apps.aiohttp_app: connexion
+    connexion.apps.flask_app: connexion
+    connexion.cli: connexion
+    connexion.decorators: connexion
+    connexion.decorators.coroutine_wrappers: connexion
+    connexion.decorators.decorator: connexion
+    connexion.decorators.metrics: connexion
+    connexion.decorators.parameter: connexion
+    connexion.decorators.produces: connexion
+    connexion.decorators.response: connexion
+    connexion.decorators.uri_parsing: connexion
+    connexion.decorators.validation: connexion
+    connexion.exceptions: connexion
+    connexion.handlers: connexion
+    connexion.http_facts: connexion
+    connexion.json_schema: connexion
+    connexion.jsonifier: connexion
+    connexion.lifecycle: connexion
+    connexion.mock: connexion
+    connexion.operations: connexion
+    connexion.operations.abstract: connexion
+    connexion.operations.compat: connexion
+    connexion.operations.openapi: connexion
+    connexion.operations.secure: connexion
+    connexion.operations.swagger2: connexion
+    connexion.options: connexion
+    connexion.problem: connexion
+    connexion.resolver: connexion
+    connexion.security: connexion
+    connexion.security.aiohttp_security_handler_factory: connexion
+    connexion.security.async_security_handler_factory: connexion
+    connexion.security.flask_security_handler_factory: connexion
+    connexion.security.security_handler_factory: connexion
+    connexion.spec: connexion
+    connexion.utils: connexion
     flask: Flask
     flask.app: Flask
     flask.blueprints: Flask
@@ -38,6 +110,15 @@ manifest:
     flask.typing: Flask
     flask.views: Flask
     flask.wrappers: Flask
+    idna: idna
+    idna.codec: idna
+    idna.compat: idna
+    idna.core: idna
+    idna.idnadata: idna
+    idna.intranges: idna
+    idna.package_data: idna
+    idna.uts46data: idna
+    inflection: inflection
     itsdangerous: itsdangerous
     itsdangerous.encoding: itsdangerous
     itsdangerous.exc: itsdangerous
@@ -68,7 +149,74 @@ manifest:
     jinja2.sandbox: Jinja2
     jinja2.utils: Jinja2
     jinja2.visitor: Jinja2
+    jsonschema: jsonschema
+    jsonschema.benchmarks: jsonschema
+    jsonschema.benchmarks.issue232: jsonschema
+    jsonschema.benchmarks.json_schema_test_suite: jsonschema
+    jsonschema.cli: jsonschema
+    jsonschema.exceptions: jsonschema
+    jsonschema.protocols: jsonschema
+    jsonschema.validators: jsonschema
     markupsafe: MarkupSafe
+    packaging: packaging
+    packaging.markers: packaging
+    packaging.metadata: packaging
+    packaging.requirements: packaging
+    packaging.specifiers: packaging
+    packaging.tags: packaging
+    packaging.utils: packaging
+    packaging.version: packaging
+    pyrsistent: pyrsistent
+    pyrsistent.typing: pyrsistent
+    requests: requests
+    requests.adapters: requests
+    requests.api: requests
+    requests.auth: requests
+    requests.certs: requests
+    requests.compat: requests
+    requests.cookies: requests
+    requests.exceptions: requests
+    requests.help: requests
+    requests.hooks: requests
+    requests.models: requests
+    requests.packages: requests
+    requests.sessions: requests
+    requests.status_codes: requests
+    requests.structures: requests
+    requests.utils: requests
+    swagger_ui_bundle: swagger_ui_bundle
+    urllib3: urllib3
+    urllib3.connection: urllib3
+    urllib3.connectionpool: urllib3
+    urllib3.contrib: urllib3
+    urllib3.contrib.appengine: urllib3
+    urllib3.contrib.ntlmpool: urllib3
+    urllib3.contrib.pyopenssl: urllib3
+    urllib3.contrib.securetransport: urllib3
+    urllib3.contrib.socks: urllib3
+    urllib3.exceptions: urllib3
+    urllib3.fields: urllib3
+    urllib3.filepost: urllib3
+    urllib3.packages: urllib3
+    urllib3.packages.backports: urllib3
+    urllib3.packages.backports.makefile: urllib3
+    urllib3.packages.six: urllib3
+    urllib3.poolmanager: urllib3
+    urllib3.request: urllib3
+    urllib3.response: urllib3
+    urllib3.util: urllib3
+    urllib3.util.connection: urllib3
+    urllib3.util.proxy: urllib3
+    urllib3.util.queue: urllib3
+    urllib3.util.request: urllib3
+    urllib3.util.response: urllib3
+    urllib3.util.retry: urllib3
+    urllib3.util.ssl_: urllib3
+    urllib3.util.ssl_match_hostname: urllib3
+    urllib3.util.ssltransport: urllib3
+    urllib3.util.timeout: urllib3
+    urllib3.util.url: urllib3
+    urllib3.util.wait: urllib3
     werkzeug: Werkzeug
     werkzeug.datastructures: Werkzeug
     werkzeug.debug: Werkzeug
@@ -109,7 +257,24 @@ manifest:
     werkzeug.wrappers.request: Werkzeug
     werkzeug.wrappers.response: Werkzeug
     werkzeug.wsgi: Werkzeug
+    yaml: PyYAML
+    yaml.composer: PyYAML
+    yaml.constructor: PyYAML
+    yaml.cyaml: PyYAML
+    yaml.dumper: PyYAML
+    yaml.emitter: PyYAML
+    yaml.error: PyYAML
+    yaml.events: PyYAML
+    yaml.loader: PyYAML
+    yaml.nodes: PyYAML
+    yaml.parser: PyYAML
+    yaml.reader: PyYAML
+    yaml.representer: PyYAML
+    yaml.resolver: PyYAML
+    yaml.scanner: PyYAML
+    yaml.serializer: PyYAML
+    yaml.tokens: PyYAML
   pip_repository:
     name: pip
     use_pip_repository_aliases: true
-integrity: 7d60ad0a3d667a713191d63ce2e9548d7462db5eea504029620ab0ff2a88cffd
+integrity: 691e8846adebbac7e9aa6ba954e55a862548034e99345e40570f3a4fa62ba5c0

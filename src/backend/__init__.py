@@ -1,15 +1,12 @@
-from flask import Flask, jsonify
-
-app = Flask(__name__)
+import connexion
 
 
-@app.route("/note", methods=["GET"])
-def note():
-    return jsonify({"message": "this is my message"})
+app = connexion.App(__name__, specification_dir="./")
+app.add_api("api.yml")
 
 
 """Start the python web server"""
 
 
 def main():
-    app.run()
+    app.run(debug=True)

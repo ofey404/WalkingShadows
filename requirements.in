@@ -1,1 +1,2 @@
-flask
+flask==2.2.3
+connexion[swagger-ui]==2.14.1
