@@ -1,33 +1,25 @@
 repos:
-  - repo: https://github.com/pre-commit/mirrors-yapf
-    rev: v0.32.0
+  - repo: https://github.com/psf/black
+    rev: 23.3.0
     hooks:
-      - id: yapf
-        name: yapf formatter
-        args: ["--style=.style.yapf", "--parallel", "--in-place"]
+      - id: black
+        language_version: python3.10
 
-  - repo: https://github.com/tekwizely/pre-commit-golang
-    rev: v1.0.0-beta.4
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v2.7.1
     hooks:
-      - id: go-mod-tidy
-      - id: go-vet-mod
-      - id: golangci-lint-mod
-      - id: go-imports
-        args: [-w]
-      - id: go-sec-mod
-      - id: go-build-mod
-      - id: go-test-mod
+      - id: prettier
 
   - repo: https://github.com/igorshubovych/markdownlint-cli
     rev: v0.33.0
     hooks:
-    - id: markdownlint
-    - id: markdownlint-fix
+      - id: markdownlint
+      - id: markdownlint-fix
 
   - repo: local
     hooks:
       - id: update-bazel-build
         name: update bazel build
         entry: ./scripts/update_bazel_build.sh
-        files: 'src/.*\.py$'
+        files: 'src/backend/.*\.py$'
         language: system

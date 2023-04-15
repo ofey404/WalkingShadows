@@ -1,0 +1,18 @@
+load("@rules_python//python:defs.bzl", "py_binary", "py_library")
+
+py_library(
+    name = "backend",
+    srcs = ["__init__.py"],
+    imports = ["../.."],
+    visibility = ["//:__subpackages__"],
+    deps = ["@pip//pytermgui"],
+)
+
+py_binary(
+    name = "backend_bin",
+    srcs = ["__main__.py"],
+    imports = ["../.."],
+    main = "__main__.py",
+    visibility = ["//:__subpackages__"],
+    deps = [":backend"],
+)

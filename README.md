@@ -16,12 +16,6 @@ Goal:
 1. Reproduce the article.
 2. Write it in business quality, battle-tested python.
 
-Roadmap:
-
-- [x] Project structure and build system.
-- [ ] Create a style guide, based on langchain package.
-- [ ] Implement a baby level memory stream.
-
 ## Takeaways of my reading materials
 
 Those markdown files are written under [Markmap | Visualize your markdown in VSCode](https://marketplace.visualstudio.com/items?itemName=gera2ld.markmap-vscode).
