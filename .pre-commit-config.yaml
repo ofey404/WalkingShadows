@@ -27,5 +27,5 @@ repos:
       - id: run-all-tests
         name: run all tests
         entry: ./scripts/test.sh
-        files: "src/backend/.*"
+        files: "src/backend/.*$"
         language: system
