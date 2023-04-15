@@ -1,6 +1,0 @@
-export_files(
-    label = [
-        "index.html",
-        "dist/bundle.js",
-    ],
-)

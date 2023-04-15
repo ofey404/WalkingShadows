@@ -23,3 +23,9 @@ repos:
         entry: ./scripts/update_bazel_build.sh
         files: 'src/backend/.*\.py$'
         language: system
+
+      - id: run-all-tests
+        name: run all tests
+        entry: ./scripts/test.sh
+        files: "src/backend/.*"
+        language: system
