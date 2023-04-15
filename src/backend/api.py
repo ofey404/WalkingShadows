@@ -1,4 +1,4 @@
-from flask import jsonify
+from flask import jsonify, render_template
 
 
 def note(note):
