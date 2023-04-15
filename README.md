@@ -16,6 +16,8 @@ Goal:
 1. Reproduce the article.
 2. Write it in business quality, battle-tested python.
 
+For roadmap, see [./docs/roadmap.md](./docs/roadmap.md).
+
 ## Takeaways of my reading materials
 
 Those markdown files are written under [Markmap | Visualize your markdown in VSCode](https://marketplace.visualstudio.com/items?itemName=gera2ld.markmap-vscode).

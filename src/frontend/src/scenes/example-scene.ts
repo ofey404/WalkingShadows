@@ -1,6 +1,6 @@
 export class ExampleScene extends Phaser.Scene {
   create() {
-    this.add.text(10, 10, "Enter your name:", {
+    this.add.text(10, 10, "Talk to me:", {
       font: "32px Courier",
       color: "#ffffff",
     });
