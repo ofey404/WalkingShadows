@@ -11,10 +11,10 @@ servers:
 paths:
   /note:
     post:
-      operationId: api.note
+      operationId: api.handle_note
       summary: Pass a simple note to philosopher.
       requestBody:
-        x-body-name: "note"
+        x-body-name: "req"
         description: ""
         required: true
         content:

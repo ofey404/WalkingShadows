@@ -1,9 +1,14 @@
 export class ExampleScene extends Phaser.Scene {
   async create() {
-    this.add.text(10, 10, "Talk to me:", {
-      font: "32px Courier",
-      color: "#ffffff",
-    });
+    this.add.text(
+      10,
+      10,
+      "I'm a philosopher in a cave.\nPass me a note (hit enter):",
+      {
+        font: "32px Courier",
+        color: "#ffffff",
+      }
+    );
 
     const textEntry = this.add.text(10, 50, "", {
       font: "32px Courier",
@@ -21,7 +26,9 @@ export class ExampleScene extends Phaser.Scene {
         ) {
           textEntry.text += event.key;
         } else if (event.keyCode === 13) {
-          alert("Sending message to server: " + textEntry.text);
+          const lines = textEntry.text.split("\n");
+          const currentLine = lines[lines.length - 1];
+
           const response = await fetch("http://127.0.0.1:5000/api/note", {
             method: "POST",
             headers: {
@@ -29,7 +36,7 @@ export class ExampleScene extends Phaser.Scene {
               Accept: "application/json",
             },
             body: JSON.stringify({
-              message: textEntry.text,
+              message: currentLine,
             }),
           });
 

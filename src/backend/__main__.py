@@ -1,9 +1,9 @@
-from __init__ import main
 import argparse
-from pathlib import Path
 
-BACKEND_DIR = Path(__file__).parent
-DEFAULT_CONFIG_DIR = BACKEND_DIR / "config"
+from __init__ import _BACKEND_DIR, create_app
+from schema import Config, Secret, new_service_context
+
+_DEFAULT_CONFIG_DIR = _BACKEND_DIR / "config"
 
 
 def parse_args():
@@ -18,13 +18,20 @@ def parse_args():
         "-c",
         "--config-dir",
         help="Directory holding configuration files",
-        default=DEFAULT_CONFIG_DIR,
+        default=_DEFAULT_CONFIG_DIR,
     )
-    args = parser.parse_args()
-    return args
+    a = parser.parse_args()
+    return a
 
 
 if __name__ == "__main__":
     args = parse_args()
-    print(args)
-    main()
+
+    conf = Config.parse_file(args.config_dir / "config.yaml")
+    secret = Secret.parse_file(args.config_dir / "secret.yaml")
+    app = create_app(new_service_context(conf, secret))
+
+    app.run(
+        port=conf.port,
+        debug=conf.debug,
+    )

@@ -1,7 +1,8 @@
-from schema.config import Config, Secret
 import unittest
 from pathlib import Path
+
 from pydantic_yaml import YamlModel
+from schema import Config, Secret
 
 DATA_DIR = Path(__file__).parent / "data"
 

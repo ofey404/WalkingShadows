@@ -7,28 +7,29 @@ py_library(
     srcs = [
         "__init__.py",
         "api.py",
-        "schema/config.py",
-        "schema/service_context.py",
-        "schema/singleton.py",
     ],
     imports = ["../.."],
     visibility = ["//:__subpackages__"],
     deps = [
+        "//src/backend/logic",
+        "//src/backend/schema",
         "@pip//connexion",
         "@pip//flask",
         "@pip//flask_cors",
-        "@pip//pydantic",
-        "@pip//pydantic_yaml",
     ],
 )
 
 py_binary(
     name = "backend_bin",
     srcs = ["__main__.py"],
+    data = glob(["config/**"]),
     imports = ["../.."],
     main = "__main__.py",
     visibility = ["//:__subpackages__"],
-    deps = [":backend"],
+    deps = [
+        ":backend",
+        "//src/backend/schema",
+    ],
 )
 
 py_test(
@@ -36,5 +37,8 @@ py_test(
     srcs = ["__test__.py"],
     imports = ["../.."],
     main = "__test__.py",
-    deps = [":backend"],
+    deps = [
+        ":backend",
+        "//src/backend/schema/test",
+    ],
 )

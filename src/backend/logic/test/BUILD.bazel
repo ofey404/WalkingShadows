@@ -1,0 +1,15 @@
+load("@rules_python//python:defs.bzl", "py_test")
+
+py_test(
+    name = "test_test",
+    srcs = [
+        "__test__.py",
+        "test_note.py",
+    ],
+    imports = ["../.."],
+    main = "__test__.py",
+    deps = [
+        "//src/backend/logic",
+        "//src/backend/schema/test",
+    ],
+)
