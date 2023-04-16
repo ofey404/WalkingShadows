@@ -1,6 +1,7 @@
 from typing import Optional
-from schema.singleton import Singleton
+
 from pydantic_yaml import YamlModel
+from schema.singleton import Singleton
 
 
 class Config(YamlModel, Singleton):

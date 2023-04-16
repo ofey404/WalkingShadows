@@ -1,9 +1,10 @@
-import connexion
-from flask_cors import CORS
-from schema import Config, Secret, ServiceContext
-from flask import current_app
 from logging.config import dictConfig
 from pathlib import Path
+
+import connexion
+from flask import current_app
+from flask_cors import CORS
+from schema import Config, Secret, ServiceContext
 
 _BACKEND_DIR = Path(__file__).parent
 _API_YAML = _BACKEND_DIR / "api.yml"

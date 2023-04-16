@@ -1,4 +1,5 @@
 import unittest
+
 from __init__ import create_app
 from schema import Config, Secret
 
@@ -12,7 +13,9 @@ class TestServer(unittest.TestCase):
         self.assertEqual(response.status_code, 200, str(response.data))
         self.assertIn("message", response.json, str(response.data))
         self.assertEqual(
-            "message received: message", response.json["message"], str(response.data)
+            "message received: message, port: 5000",
+            response.json["message"],
+            str(response.data),
         )
 
 

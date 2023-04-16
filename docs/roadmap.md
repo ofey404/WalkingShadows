@@ -45,9 +45,12 @@ Content:
 
 ## Flask
 
-- A good tutorial from Real Python: [Python REST APIs With Flask, Connexion, and SQLAlchemy – Part 1](https://realpython.com/flask-connexion-rest-api/)
-- Which logger to use in a Python Flask app with Connexion: <https://stackoverflow.com/questions/59732627/which-logger-to-use-in-a-python-flask-app-with-connexion>
+- A good tutorial from Real Python:
+  [Python REST APIs With Flask, Connexion, and SQLAlchemy – Part 1](https://realpython.com/flask-connexion-rest-api/)
+- Which logger to use in a Python Flask app with Connexion:
+  <https://stackoverflow.com/questions/59732627/which-logger-to-use-in-a-python-flask-app-with-connexion>
 
 ## Python project layout
 
-- Python Application Layouts: A Reference: <https://realpython.com/python-application-layouts/>
+- Python Application Layouts: A Reference:
+  <https://realpython.com/python-application-layouts/>

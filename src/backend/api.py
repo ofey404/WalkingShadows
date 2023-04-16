@@ -1,8 +1,7 @@
 import connexion
-from schema import ServiceContext
-from flask import current_app
-from flask import jsonify
 import logic
+from flask import current_app, jsonify
+from schema import ServiceContext
 
 
 def service_context() -> ServiceContext:

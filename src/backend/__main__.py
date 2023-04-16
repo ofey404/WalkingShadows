@@ -1,6 +1,7 @@
 import argparse
+
+from __init__ import _BACKEND_DIR, create_app
 from schema import Config, Secret
-from __init__ import create_app, _BACKEND_DIR
 
 _DEFAULT_CONFIG_DIR = _BACKEND_DIR / "config"
 
