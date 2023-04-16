@@ -1,10 +1,11 @@
 import unittest
-from __init__ import APP
+from __init__ import create_app
+from schema import Config, Secret
 
 
 class TestServer(unittest.TestCase):
     def setUp(self):
-        self.app = APP.app.test_client()
+        self.app = create_app(Config(), Secret(openai_api_key="")).app.test_client()
 
     def test_api_note(self):
         response = self.app.post("/api/note", json={"message": "message"})

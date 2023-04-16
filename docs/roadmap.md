@@ -7,14 +7,21 @@ in reverse chronological order.
 
 - [x] Project structure and build system.
 - [x] Grab what we want from Phaser game engine.
-- [ ] Implement 0.1 version: a philosopher in the cave
+- [ ] 0.1 version: A philosopher in a cave
   - [x] Connect frontend and backend
   - [x] Create a CI
+  - [x] Create a style guide, based on langchain package. (pydantic)
   - [ ] Connect OpenAI, take langchain into project
-  - [ ] Build feature
-- [ ] Create a style guide, based on langchain package.
-- [ ] Implement a baby level memory stream.
-- [ ] Multiple agents. Rather than single.
+  - [ ] Implement a baby level memory stream.
+    - [ ] Feature: Memory retrival
+  - [ ] Agent + Environment (the campfire flickered)
+    - [ ] Feature: Interaction with environment.
+    - [ ] Feature: Reflection
+- [ ] 0.2 version: Philosopher and a friend.
+  - [ ] Multiple agents. Rather than single.
+    - [ ] Feature: Interaction.
+  - [ ] Friend bring food to the philosopher.
+    - [ ] Feature: Planning.
 
 ## 0.1 Philosopher in the cave
 

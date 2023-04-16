@@ -1,0 +1,17 @@
+load("@rules_python//python:defs.bzl", "py_library")
+
+py_library(
+    name = "schema",
+    srcs = [
+        "__init__.py",
+        "config.py",
+        "service_context.py",
+        "singleton.py",
+    ],
+    imports = [".."],
+    visibility = ["//src/backend:__subpackages__"],
+    deps = [
+        "@pip//pydantic",
+        "@pip//pydantic_yaml",
+    ],
+)

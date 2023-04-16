@@ -4,7 +4,8 @@ from pydantic_yaml import YamlModel
 
 
 class Config(YamlModel, Singleton):
-    port: int
+    port: int = 5000
+    debug: bool = True
 
 
 class Secret(YamlModel, Singleton):
