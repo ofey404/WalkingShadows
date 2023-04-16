@@ -33,6 +33,6 @@ repos:
 
       - id: run-all-tests
         name: run all tests
-        entry: ./scripts/test.sh
+        entry: ./scripts/test.sh --test_tag_filters=-integration
         files: "src/backend/.*$"
         language: system

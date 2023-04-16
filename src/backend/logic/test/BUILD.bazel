@@ -12,4 +12,5 @@ py_test(
         "//src/backend/logic",
         "//src/backend/schema/test",
     ],
+    size = "small",
 )
