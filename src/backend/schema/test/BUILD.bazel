@@ -1,4 +1,4 @@
-load("@rules_python//python:defs.bzl", "py_test")
+load("@rules_python//python:defs.bzl", "py_library", "py_test")
 
 py_test(
     name = "test_test",
@@ -12,5 +12,16 @@ py_test(
     deps = [
         "//src/backend/schema",
         "@pip//pydantic_yaml",
+    ],
+)
+
+py_library(
+    name = "test",
+    srcs = ["__init__.py"],
+    imports = ["../.."],
+    visibility = ["//src/backend:__subpackages__"],
+    deps = [
+        "//src/backend/schema",
+        "@pip//langchain",
     ],
 )
