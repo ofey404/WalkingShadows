@@ -6,7 +6,6 @@ py_library(
         "__init__.py",
         "config.py",
         "service_context.py",
-        "singleton.py",
     ],
     imports = [".."],
     visibility = ["//src/backend:__subpackages__"],
