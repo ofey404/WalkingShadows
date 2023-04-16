@@ -4,16 +4,13 @@ from pathlib import Path
 import connexion
 from flask import current_app
 from flask_cors import CORS
-from schema import Config, Secret, ServiceContext
+from schema import ServiceContext
 
 _BACKEND_DIR = Path(__file__).parent
 _API_YAML = _BACKEND_DIR / "api.yml"
 
 
-def create_app(
-    conf: Config,
-    secret: Secret,
-) -> connexion.FlaskApp:
+def create_app(service_context: ServiceContext) -> connexion.FlaskApp:
     dictConfig(
         {
             "version": 1,
@@ -39,6 +36,6 @@ def create_app(
     CORS(app.app)
 
     with app.app.app_context():
-        current_app.ctx = ServiceContext(config=conf, secret=secret)
+        current_app.ctx = service_context
 
     return app

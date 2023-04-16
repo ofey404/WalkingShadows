@@ -40,5 +40,6 @@ py_test(
     deps = [
         ":backend",
         "//src/backend/schema",
+        "@pip//langchain",
     ],
 )

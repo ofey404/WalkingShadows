@@ -1,12 +1,32 @@
 import unittest
 
 from __init__ import create_app
-from schema import Config, Secret
+from langchain.llms.fake import FakeListLLM
+from schema import Config, Secret, ServiceContext
+
+
+def fake_service_context() -> ServiceContext:
+    return ServiceContext(
+        config=Config(
+            port=5000,
+            debug=True,
+        ),
+        secret=Secret(
+            openai_api_key="",
+        ),
+        llm=FakeListLLM(
+            responses=[
+                "Action: Python REPL\nAction Input: print(2 + 2)",
+                "Final Answer: 4",
+            ]
+        ),
+    )
 
 
 class TestServer(unittest.TestCase):
     def setUp(self):
-        self.app = create_app(Config(), Secret(openai_api_key="")).app.test_client()
+        self.ctx = fake_service_context()
+        self.app = create_app(self.ctx).app.test_client()
 
     def test_api_note(self):
         response = self.app.post("/api/note", json={"message": "message"})
