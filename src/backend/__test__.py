@@ -1,10 +1,10 @@
 import unittest
-from __init__ import app
+from __init__ import APP
 
 
 class TestServer(unittest.TestCase):
     def setUp(self):
-        self.app = app.app.test_client()
+        self.app = APP.app.test_client()
 
     def test_api_note(self):
         response = self.app.post("/api/note", json={"message": "message"})

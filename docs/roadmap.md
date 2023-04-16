@@ -9,12 +9,12 @@ in reverse chronological order.
 - [x] Grab what we want from Phaser game engine.
 - [ ] Implement 0.1 version: a philosopher in the cave
   - [x] Connect frontend and backend
-  - [ ] Create a CI
+  - [x] Create a CI
   - [ ] Connect OpenAI, take langchain into project
   - [ ] Build feature
 - [ ] Create a style guide, based on langchain package.
-- [ ] Use bazel/gazelle for js.
 - [ ] Implement a baby level memory stream.
+- [ ] Multiple agents. Rather than single.
 
 ## 0.1 Philosopher in the cave
 
@@ -39,3 +39,8 @@ Content:
 ## Flask
 
 - A good tutorial from Real Python: [Python REST APIs With Flask, Connexion, and SQLAlchemy – Part 1](https://realpython.com/flask-connexion-rest-api/)
+- Which logger to use in a Python Flask app with Connexion: <https://stackoverflow.com/questions/59732627/which-logger-to-use-in-a-python-flask-app-with-connexion>
+
+## Python project layout
+
+- Python Application Layouts: A Reference: <https://realpython.com/python-application-layouts/>
