@@ -11,9 +11,10 @@ in reverse chronological order.
   - [x] Connect frontend and backend
   - [x] Create a CI
   - [x] Create a style guide, based on langchain package. (pydantic)
-  - [ ] Connect OpenAI, take langchain into project
+  - [x] Connect OpenAI, take langchain into project
   - [ ] Implement a baby level memory stream.
     - [ ] Feature: Memory retrival
+  - [ ] Fix frontend display
   - [ ] Agent + Environment (the campfire flickered)
     - [ ] Feature: Interaction with environment.
     - [ ] Feature: Reflection
