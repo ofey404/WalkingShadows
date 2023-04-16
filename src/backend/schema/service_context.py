@@ -18,7 +18,10 @@ def new_service_context(
     config: Config,
     secret: Secret,
 ) -> ServiceContext:
-    llm = OpenAI(openai_api_key=secret.openai_api_key)
+    llm = OpenAI(
+        openai_api_key=secret.openai_api_key,
+        verbose=config.debug,
+    )
     return _new_service_context_with_llm(
         config=config,
         secret=secret,
