@@ -1,10 +1,15 @@
 load("@rules_python//python:defs.bzl", "py_binary", "py_library", "py_test")
 
+# gazelle:python_root
+
 py_library(
     name = "backend",
     srcs = [
         "__init__.py",
         "api.py",
+        "schema/config.py",
+        "schema/service_context.py",
+        "schema/singleton.py",
     ],
     imports = ["../.."],
     visibility = ["//:__subpackages__"],
@@ -12,6 +17,8 @@ py_library(
         "@pip//connexion",
         "@pip//flask",
         "@pip//flask_cors",
+        "@pip//pydantic",
+        "@pip//pydantic_yaml",
     ],
 )
 

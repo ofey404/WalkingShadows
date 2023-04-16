@@ -1,0 +1,16 @@
+load("@rules_python//python:defs.bzl", "py_test")
+
+py_test(
+    name = "test_test",
+    srcs = [
+        "__test__.py",
+        "test_config.py",
+    ],
+    data = glob(["data/*"]),
+    imports = ["../.."],
+    main = "__test__.py",
+    deps = [
+        "//src/backend",
+        "@pip//pydantic_yaml",
+    ],
+)

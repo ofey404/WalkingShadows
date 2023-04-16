@@ -14,12 +14,12 @@ paths:
       operationId: api.note
       summary: Pass a simple note to philosopher.
       requestBody:
+        x-body-name: "note"
         description: ""
         required: true
         content:
           application/json:
             schema:
-              x-body-name: "note"
               $ref: "#/components/schemas/Note"
       responses:
         "200":
