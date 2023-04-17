@@ -6,5 +6,8 @@ export const GameConfig: Phaser.Types.Core.GameConfig = {
   height: 600,
   type: Phaser.AUTO,
   parent: "game",
+  dom: {
+    createContainer: true,
+  },
   scene: [ExampleScene],
 };
