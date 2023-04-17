@@ -1,13 +1,12 @@
 from typing import Optional
 
 from pydantic_yaml import YamlModel
-from schema.singleton import Singleton
 
 
-class Config(YamlModel, Singleton):
+class Config(YamlModel):
     port: int = 5000
     debug: bool = True
 
 
-class Secret(YamlModel, Singleton):
+class Secret(YamlModel):
     openai_api_key: str

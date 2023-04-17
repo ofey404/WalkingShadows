@@ -43,6 +43,8 @@ Content:
 - Github: <https://github.com/photonstorm/phaser>
 - Bazel for nodejs: <https://github.com/benchsci/rules_nodejs_gazelle>
 - Grab what we want from: <http://labs.phaser.io/>
+- Phaser responsive design: <http://www.netexl.com/blog/making-of-a-responsive-game-in-phaser-part-1/>
+- Speech Bubble: <https://phaser.io/examples/v3/view/game-objects/text/speech-bubble>
 
 ## Flask
 

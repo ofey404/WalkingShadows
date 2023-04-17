@@ -13,6 +13,7 @@ py_test(
         "//src/backend/schema",
         "@pip//pydantic_yaml",
     ],
+    size = "small",
 )
 
 py_library(

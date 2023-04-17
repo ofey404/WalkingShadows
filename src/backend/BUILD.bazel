@@ -41,4 +41,5 @@ py_test(
         ":backend",
         "//src/backend/schema/test",
     ],
+    tags = ["integration"],
 )
