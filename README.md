@@ -22,7 +22,9 @@ For current development status, see [this repo's issue board](https://github.com
 
 This is the latest snapshot:
 
-![latest](https://user-images.githubusercontent.com/35857538/232324024-e614dbad-6bdd-4b3b-b16d-01df231b49c5.png)
+![latest](https://user-images.githubusercontent.com/35857538/232515871-47538f30-d68a-4d9c-8e41-cc25a40b745a.png)
+
+![latest](https://user-images.githubusercontent.com/35857538/232516190-e8ba0777-6d4a-4d6d-bcb8-0eebbecdc81f.png)
 
 ## Takeaways of my reading materials
 
