@@ -7,11 +7,48 @@ export class ExampleScene extends Phaser.Scene {
   async create() {
     this.add.image(400, 500, "campfire");
     this.add.image(300, 500, "mage");
-    this.createSpeechBubble(300, 200, 400, 200, "Hello World");
+    this.createSpeechBubble(
+      100,
+      100,
+      600,
+      300,
+      "With your message, I contemplate about the meaning of life."
+    );
+    let update = (message: string) => {
+      this.createSpeechBubble(100, 100, 600, 300, message);
+    };
+
     const element = this.add.dom(400, 0).createFromCache("message-form");
+    element.addListener("click");
+    element.on("click", async function (event: any) {
+      if (event.target.name === "sendButton") {
+        const inputText = this.getChildByName("messageField");
+
+        // Have they entered anything?
+        if (inputText.value !== "") {
+          const message = inputText.value;
+
+          const response = await fetch("http://127.0.0.1:5000/api/note", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+            },
+            body: JSON.stringify({
+              message: message,
+            }),
+          });
+          if (!response.ok) {
+            throw new Error(`Error! status: ${response.status}`);
+          }
+          const result = (await response.json()) as NoteResponse;
+          update(result.message);
+        }
+      }
+    });
     this.tweens.add({
       targets: element,
-      y: 100,
+      y: 50,
       duration: 3000,
       ease: "Power3",
     });
@@ -79,3 +116,7 @@ export class ExampleScene extends Phaser.Scene {
     );
   }
 }
+
+type NoteResponse = {
+  message: string;
+};
