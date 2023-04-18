@@ -20,14 +20,40 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/Note"
+              $ref: "#/components/schemas/NoteRequest"
       responses:
         "200":
           description: "Success"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/NoteResponse"
+        "500":
+          description: "Any exception occurred"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+#    /sandbox/{id}/info:
+#      post:
 
 components:
   schemas:
-    Note:
+    NoteRequest:
+      type: object
+      required:
+        - message
+      properties:
+        message:
+          type: string
+    NoteResponse:
+      type: object
+      required:
+        - message
+      properties:
+        message:
+          type: string
+    Error:
       type: object
       required:
         - message

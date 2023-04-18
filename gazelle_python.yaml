@@ -64,6 +64,9 @@ manifest:
     attrs.filters: attrs
     attrs.setters: attrs
     attrs.validators: attrs
+    cachetools: cachetools
+    cachetools.func: cachetools
+    cachetools.keys: cachetools
     certifi: certifi
     certifi.core: certifi
     charset_normalizer: charset_normalizer
@@ -174,6 +177,60 @@ manifest:
     flask_cors.extension: Flask_Cors
     flask_cors.version: Flask_Cors
     frozenlist: frozenlist
+    gptcache: gptcache
+    gptcache.adapter: gptcache
+    gptcache.adapter.adapter: gptcache
+    gptcache.adapter.langchain_models: gptcache
+    gptcache.adapter.openai: gptcache
+    gptcache.embedding: gptcache
+    gptcache.embedding.base: gptcache
+    gptcache.embedding.cohere: gptcache
+    gptcache.embedding.fasttext: gptcache
+    gptcache.embedding.huggingface: gptcache
+    gptcache.embedding.onnx: gptcache
+    gptcache.embedding.openai: gptcache
+    gptcache.embedding.sbert: gptcache
+    gptcache.embedding.string: gptcache
+    gptcache.manager: gptcache
+    gptcache.manager.data_manager: gptcache
+    gptcache.manager.eviction: gptcache
+    gptcache.manager.eviction.base: gptcache
+    gptcache.manager.eviction.manager: gptcache
+    gptcache.manager.eviction.memory_cache: gptcache
+    gptcache.manager.eviction_manager: gptcache
+    gptcache.manager.factory: gptcache
+    gptcache.manager.object_data: gptcache
+    gptcache.manager.object_data.base: gptcache
+    gptcache.manager.object_data.local_storage: gptcache
+    gptcache.manager.object_data.manager: gptcache
+    gptcache.manager.object_data.s3_storage: gptcache
+    gptcache.manager.scalar_data: gptcache
+    gptcache.manager.scalar_data.base: gptcache
+    gptcache.manager.scalar_data.manager: gptcache
+    gptcache.manager.scalar_data.sql_storage: gptcache
+    gptcache.manager.vector_data: gptcache
+    gptcache.manager.vector_data.base: gptcache
+    gptcache.manager.vector_data.chroma: gptcache
+    gptcache.manager.vector_data.faiss: gptcache
+    gptcache.manager.vector_data.hnswlib_store: gptcache
+    gptcache.manager.vector_data.manager: gptcache
+    gptcache.manager.vector_data.milvus: gptcache
+    gptcache.processor: gptcache
+    gptcache.processor.post: gptcache
+    gptcache.processor.pre: gptcache
+    gptcache.similarity_evaluation: gptcache
+    gptcache.similarity_evaluation.distance: gptcache
+    gptcache.similarity_evaluation.exact_match: gptcache
+    gptcache.similarity_evaluation.kreciprocal: gptcache
+    gptcache.similarity_evaluation.np: gptcache
+    gptcache.similarity_evaluation.onnx: gptcache
+    gptcache.similarity_evaluation.similarity_evaluation: gptcache
+    gptcache.utils: gptcache
+    gptcache.utils.dependency_control: gptcache
+    gptcache.utils.error: gptcache
+    gptcache.utils.lazy_import: gptcache
+    gptcache.utils.log: gptcache
+    gptcache.utils.response: gptcache
     greenlet: greenlet
     greenlet.platform: greenlet
     idna: idna
@@ -235,6 +292,9 @@ manifest:
     langchain.agents.agent_toolkits.json.base: langchain
     langchain.agents.agent_toolkits.json.prompt: langchain
     langchain.agents.agent_toolkits.json.toolkit: langchain
+    langchain.agents.agent_toolkits.nla: langchain
+    langchain.agents.agent_toolkits.nla.tool: langchain
+    langchain.agents.agent_toolkits.nla.toolkit: langchain
     langchain.agents.agent_toolkits.openapi: langchain
     langchain.agents.agent_toolkits.openapi.base: langchain
     langchain.agents.agent_toolkits.openapi.planner: langchain
@@ -261,25 +321,32 @@ manifest:
     langchain.agents.agent_types: langchain
     langchain.agents.chat: langchain
     langchain.agents.chat.base: langchain
+    langchain.agents.chat.output_parser: langchain
     langchain.agents.chat.prompt: langchain
     langchain.agents.conversational: langchain
     langchain.agents.conversational.base: langchain
+    langchain.agents.conversational.output_parser: langchain
     langchain.agents.conversational.prompt: langchain
     langchain.agents.conversational_chat: langchain
     langchain.agents.conversational_chat.base: langchain
+    langchain.agents.conversational_chat.output_parser: langchain
     langchain.agents.conversational_chat.prompt: langchain
     langchain.agents.initialize: langchain
     langchain.agents.load_tools: langchain
     langchain.agents.loading: langchain
     langchain.agents.mrkl: langchain
     langchain.agents.mrkl.base: langchain
+    langchain.agents.mrkl.output_parser: langchain
     langchain.agents.mrkl.prompt: langchain
     langchain.agents.react: langchain
     langchain.agents.react.base: langchain
+    langchain.agents.react.output_parser: langchain
     langchain.agents.react.textworld_prompt: langchain
     langchain.agents.react.wiki_prompt: langchain
+    langchain.agents.schema: langchain
     langchain.agents.self_ask_with_search: langchain
     langchain.agents.self_ask_with_search.base: langchain
+    langchain.agents.self_ask_with_search.output_parser: langchain
     langchain.agents.self_ask_with_search.prompt: langchain
     langchain.agents.tools: langchain
     langchain.cache: langchain
@@ -288,9 +355,11 @@ manifest:
     langchain.callbacks.arize_callback: langchain
     langchain.callbacks.base: langchain
     langchain.callbacks.clearml_callback: langchain
+    langchain.callbacks.comet_ml_callback: langchain
     langchain.callbacks.openai_info: langchain
     langchain.callbacks.shared: langchain
     langchain.callbacks.stdout: langchain
+    langchain.callbacks.streaming_aiter: langchain
     langchain.callbacks.streaming_stdout: langchain
     langchain.callbacks.streamlit: langchain
     langchain.callbacks.tracers: langchain
@@ -393,6 +462,7 @@ manifest:
     langchain.chains.summarize.stuff_prompt: langchain
     langchain.chains.transform: langchain
     langchain.chat_models: langchain
+    langchain.chat_models.anthropic: langchain
     langchain.chat_models.azure_openai: langchain
     langchain.chat_models.base: langchain
     langchain.chat_models.openai: langchain
@@ -410,11 +480,13 @@ manifest:
     langchain.document_loaders.azure_blob_storage_file: langchain
     langchain.document_loaders.base: langchain
     langchain.document_loaders.bigquery: langchain
+    langchain.document_loaders.bilibili: langchain
     langchain.document_loaders.blackboard: langchain
     langchain.document_loaders.college_confidential: langchain
     langchain.document_loaders.conllu: langchain
     langchain.document_loaders.csv_loader: langchain
     langchain.document_loaders.dataframe: langchain
+    langchain.document_loaders.diffbot: langchain
     langchain.document_loaders.directory: langchain
     langchain.document_loaders.duckdb_loader: langchain
     langchain.document_loaders.email: langchain
@@ -424,6 +496,7 @@ manifest:
     langchain.document_loaders.figma: langchain
     langchain.document_loaders.gcs_directory: langchain
     langchain.document_loaders.gcs_file: langchain
+    langchain.document_loaders.git: langchain
     langchain.document_loaders.gitbook: langchain
     langchain.document_loaders.googledrive: langchain
     langchain.document_loaders.gutenberg: langchain
@@ -445,11 +518,13 @@ manifest:
     langchain.document_loaders.s3_directory: langchain
     langchain.document_loaders.s3_file: langchain
     langchain.document_loaders.sitemap: langchain
+    langchain.document_loaders.slack_directory: langchain
     langchain.document_loaders.srt: langchain
     langchain.document_loaders.telegram: langchain
     langchain.document_loaders.text: langchain
     langchain.document_loaders.unstructured: langchain
     langchain.document_loaders.url: langchain
+    langchain.document_loaders.url_playwright: langchain
     langchain.document_loaders.url_selenium: langchain
     langchain.document_loaders.web_base: langchain
     langchain.document_loaders.whatsapp_chat: langchain
@@ -527,10 +602,12 @@ manifest:
     langchain.memory.chat_message_histories: langchain
     langchain.memory.chat_message_histories.dynamodb: langchain
     langchain.memory.chat_message_histories.in_memory: langchain
+    langchain.memory.chat_message_histories.postgres: langchain
     langchain.memory.chat_message_histories.redis: langchain
     langchain.memory.combined: langchain
     langchain.memory.entity: langchain
     langchain.memory.kg: langchain
+    langchain.memory.motorhead_memory: langchain
     langchain.memory.prompt: langchain
     langchain.memory.readonly: langchain
     langchain.memory.simple: langchain
@@ -538,6 +615,7 @@ manifest:
     langchain.memory.summary_buffer: langchain
     langchain.memory.token_buffer: langchain
     langchain.memory.utils: langchain
+    langchain.memory.vectorstore: langchain
     langchain.model_laboratory: langchain
     langchain.output_parsers: langchain
     langchain.output_parsers.fix: langchain
@@ -567,12 +645,15 @@ manifest:
     langchain.requests: langchain
     langchain.retrievers: langchain
     langchain.retrievers.chatgpt_plugin_retriever: langchain
+    langchain.retrievers.databerry: langchain
     langchain.retrievers.elastic_search_bm25: langchain
     langchain.retrievers.llama_index: langchain
     langchain.retrievers.metal: langchain
     langchain.retrievers.pinecone_hybrid_search: langchain
     langchain.retrievers.remote_retriever: langchain
+    langchain.retrievers.svm: langchain
     langchain.retrievers.tfidf: langchain
+    langchain.retrievers.time_weighted_retriever: langchain
     langchain.retrievers.weaviate_hybrid_search: langchain
     langchain.schema: langchain
     langchain.serpapi: langchain
@@ -626,6 +707,7 @@ manifest:
     langchain.utilities.google_serper: langchain
     langchain.utilities.loading: langchain
     langchain.utilities.openweathermap: langchain
+    langchain.utilities.python: langchain
     langchain.utilities.searx_search: langchain
     langchain.utilities.serpapi: langchain
     langchain.utilities.wikipedia: langchain
@@ -633,6 +715,7 @@ manifest:
     langchain.utilities.zapier: langchain
     langchain.utils: langchain
     langchain.vectorstores: langchain
+    langchain.vectorstores.annoy: langchain
     langchain.vectorstores.atlas: langchain
     langchain.vectorstores.base: langchain
     langchain.vectorstores.chroma: langchain
@@ -664,6 +747,13 @@ manifest:
     marshmallow_enum: marshmallow_enum
     multidict: multidict
     mypy_extensions: mypy_extensions
+    numexpr: numexpr
+    numexpr.cpuinfo: numexpr
+    numexpr.expressions: numexpr
+    numexpr.interpreter: numexpr
+    numexpr.necompiler: numexpr
+    numexpr.utils: numexpr
+    numexpr.version: numexpr
     numpy: numpy
     numpy.array_api: numpy
     numpy.array_api.linalg: numpy
@@ -838,6 +928,45 @@ manifest:
     numpy.typing.mypy_plugin: numpy
     numpy.typing.setup: numpy
     numpy.version: numpy
+    openai: openai
+    openai.api_requestor: openai
+    openai.api_resources: openai
+    openai.api_resources.abstract: openai
+    openai.api_resources.abstract.api_resource: openai
+    openai.api_resources.abstract.createable_api_resource: openai
+    openai.api_resources.abstract.deletable_api_resource: openai
+    openai.api_resources.abstract.engine_api_resource: openai
+    openai.api_resources.abstract.listable_api_resource: openai
+    openai.api_resources.abstract.nested_resource_class_methods: openai
+    openai.api_resources.abstract.updateable_api_resource: openai
+    openai.api_resources.audio: openai
+    openai.api_resources.chat_completion: openai
+    openai.api_resources.completion: openai
+    openai.api_resources.customer: openai
+    openai.api_resources.deployment: openai
+    openai.api_resources.edit: openai
+    openai.api_resources.embedding: openai
+    openai.api_resources.engine: openai
+    openai.api_resources.error_object: openai
+    openai.api_resources.experimental: openai
+    openai.api_resources.experimental.completion_config: openai
+    openai.api_resources.file: openai
+    openai.api_resources.fine_tune: openai
+    openai.api_resources.image: openai
+    openai.api_resources.model: openai
+    openai.api_resources.moderation: openai
+    openai.cli: openai
+    openai.datalib: openai
+    openai.embeddings_utils: openai
+    openai.error: openai
+    openai.object_classes: openai
+    openai.openai_object: openai
+    openai.openai_response: openai
+    openai.upload_progress: openai
+    openai.util: openai
+    openai.validators: openai
+    openai.version: openai
+    openai.wandb_logger: openai
     openapi_schema_pydantic: openapi_schema_pydantic
     openapi_schema_pydantic.util: openapi_schema_pydantic
     openapi_schema_pydantic.v3: openapi_schema_pydantic
@@ -1236,6 +1365,29 @@ manifest:
     tests.v3_0_3.test_config_example: openapi_schema_pydantic
     tests.v3_0_3.test_util: openapi_schema_pydantic
     tests.v3_1_0: openapi_schema_pydantic
+    tqdm: tqdm
+    tqdm.asyncio: tqdm
+    tqdm.auto: tqdm
+    tqdm.autonotebook: tqdm
+    tqdm.cli: tqdm
+    tqdm.contrib: tqdm
+    tqdm.contrib.bells: tqdm
+    tqdm.contrib.concurrent: tqdm
+    tqdm.contrib.discord: tqdm
+    tqdm.contrib.itertools: tqdm
+    tqdm.contrib.logging: tqdm
+    tqdm.contrib.slack: tqdm
+    tqdm.contrib.telegram: tqdm
+    tqdm.contrib.utils_worker: tqdm
+    tqdm.dask: tqdm
+    tqdm.gui: tqdm
+    tqdm.keras: tqdm
+    tqdm.notebook: tqdm
+    tqdm.rich: tqdm
+    tqdm.std: tqdm
+    tqdm.tk: tqdm
+    tqdm.utils: tqdm
+    tqdm.version: tqdm
     typing_extensions: typing_extensions
     typing_inspect: typing_inspect
     urllib3: urllib3
@@ -1338,4 +1490,4 @@ manifest:
   pip_repository:
     name: pip
     use_pip_repository_aliases: true
-integrity: 20ed7b246f68e27132962bd40043d1499a2adccaf54785e817f7354e21ca9d9f
+integrity: 91294f6ab5aebf49d0c9a31824b84e5c9db7958f2ad90a948759fab9adc780df

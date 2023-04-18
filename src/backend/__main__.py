@@ -1,7 +1,7 @@
 import argparse
 
 from __init__ import _BACKEND_DIR, create_app
-from schema import Config, Secret, ServiceContext
+from schema import Config, Secret, new_service_context
 
 _DEFAULT_CONFIG_DIR = _BACKEND_DIR / "config"
 
@@ -29,7 +29,7 @@ if __name__ == "__main__":
 
     conf = Config.parse_file(args.config_dir / "config.yaml")
     secret = Secret.parse_file(args.config_dir / "secret.yaml")
-    app = create_app(ServiceContext.new(conf, secret))
+    app = create_app(new_service_context(conf, secret))
 
     app.run(
         port=conf.port,

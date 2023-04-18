@@ -8,5 +8,8 @@ py_library(
     ],
     imports = [".."],
     visibility = ["//src/backend:__subpackages__"],
-    deps = ["//src/backend/schema"],
+    deps = [
+        "//src/backend/schema",
+        "@pip//pydantic",
+    ],
 )

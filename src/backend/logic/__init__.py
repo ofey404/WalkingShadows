@@ -1,3 +1,3 @@
-from logic.note import note
+from logic.note import NoteRequest, NoteResponse, note
 
-__all__ = ["note"]
+__all__ = ["note", "NoteRequest", "NoteResponse"]

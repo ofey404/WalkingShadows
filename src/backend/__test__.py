@@ -19,6 +19,15 @@ class TestServer(unittest.TestCase):
             response.json["message"],
         )
 
+        # Empty llm_responses would cause list index out of range error
+        self.ctx = fake_service_context([])
+        response = self.app.post("/api/note", json={"message": "message"})
+        self.assertEqual(response.status_code, 500)
+        self.assertEqual(
+            "list index out of range",
+            response.json["message"],
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

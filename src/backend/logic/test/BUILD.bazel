@@ -2,6 +2,7 @@ load("@rules_python//python:defs.bzl", "py_test")
 
 py_test(
     name = "test_test",
+    size = "small",
     srcs = [
         "__test__.py",
         "test_note.py",
@@ -12,5 +13,4 @@ py_test(
         "//src/backend/logic",
         "//src/backend/schema/test",
     ],
-    size = "small",
 )
