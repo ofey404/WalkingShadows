@@ -1,4 +1,3 @@
-import connexion
 import logic
 from flask import current_app, jsonify
 from schema import ServiceContext
@@ -11,8 +10,12 @@ def service_context() -> ServiceContext:
 
 
 def handle_note(req):
-    ctx = service_context()
-    message = req.get("message")
-    answer = logic.note(ctx, message)
-
-    return jsonify({"message": answer})
+    try:
+        return jsonify(
+            logic.note(
+                service_context(),
+                logic.NoteRequest.parse_obj(req),
+            ).dict()
+        )
+    except Exception as e:
+        return jsonify({"message": str(e)}), 500

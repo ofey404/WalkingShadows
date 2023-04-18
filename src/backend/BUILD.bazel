@@ -37,9 +37,9 @@ py_test(
     srcs = ["__test__.py"],
     imports = ["../.."],
     main = "__test__.py",
+    tags = ["integration"],
     deps = [
         ":backend",
         "//src/backend/schema/test",
     ],
-    tags = ["integration"],
 )
