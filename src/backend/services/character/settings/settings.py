@@ -1,13 +1,11 @@
 from functools import lru_cache
 
+from libs import uvicornx
 from pydantic import BaseSettings
 
 
 class Settings(BaseSettings):
-    host = "0.0.0.0"
-    port = 8000
-    reload = False
-    log_level = "info"
+    uvicorn: uvicornx.Settings = uvicornx.Settings()
 
 
 @lru_cache

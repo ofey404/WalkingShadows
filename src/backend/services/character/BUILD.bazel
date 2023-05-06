@@ -19,8 +19,8 @@ py_binary(
     visibility = ["//src/backend/services/character:__subpackages__"],
     deps = [
         ":character",
+        "//src/backend/libs/uvicornx",
         "//src/backend/services/character/settings",
         "@pip//fastapi",
-        "@pip//uvicorn",
     ],
 )

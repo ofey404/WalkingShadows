@@ -1,8 +1,6 @@
-from run import run
-from settings import Settings, get_settings
+from libs.uvicornx.settings import Settings, run
 
 __all__ = [
     "run",
     "Settings",
-    "get_settings",
 ]

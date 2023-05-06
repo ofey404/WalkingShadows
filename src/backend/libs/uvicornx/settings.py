@@ -1,5 +1,4 @@
-from functools import lru_cache
-
+import uvicorn
 from pydantic import BaseSettings
 
 
@@ -9,7 +8,16 @@ class Settings(BaseSettings):
     reload = False
     log_level = "info"
 
+    class Config:
+        env_prefix = "UVICORN_"
 
-@lru_cache
-def get_settings() -> Settings:
-    return Settings()
+
+def run(app, s: Settings):
+    """run() wraps uvicorn.run() with handy configurations"""
+    uvicorn.run(
+        app,
+        host=s.host,
+        port=s.port,
+        reload=s.reload,
+        log_level=s.log_level,
+    )

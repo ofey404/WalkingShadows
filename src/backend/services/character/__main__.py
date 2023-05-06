@@ -1,6 +1,5 @@
 import logging
 
-import uvicorn
 from fastapi import FastAPI
 from libs import uvicornx
 from services.character.routers import tick
@@ -14,5 +13,5 @@ app.include_router(tick.router)
 if __name__ == "__main__":
     uvicornx.run(
         app,
-        uvicornx.get_settings(),
+        get_settings().uvicorn,
     )
