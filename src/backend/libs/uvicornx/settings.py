@@ -3,10 +3,9 @@ from pydantic import BaseSettings
 
 
 class Settings(BaseSettings):
-    host = "0.0.0.0"
-    port = 8000
-    reload = False
-    log_level = "info"
+    host: str = "0.0.0.0"
+    port: int = 8000
+    log_level: str = "info"
 
     class Config:
         env_prefix = "UVICORN_"
@@ -18,6 +17,5 @@ def run(app, s: Settings):
         app,
         host=s.host,
         port=s.port,
-        reload=s.reload,
         log_level=s.log_level,
     )

@@ -1,9 +1,7 @@
-import logging
-
 from fastapi import APIRouter, HTTPException, status
+from loguru import logger
 from pydantic import BaseModel
 
-logger = logging.getLogger(__name__)
 router = APIRouter()
 
 
@@ -23,10 +21,11 @@ def handle_tick(
     world: str,
     body: TickRequest,
 ) -> dict:
+    logger.info(f"world: {world}")
+
     if body.now != "now":
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
             detail="now must be 'now'",
         )
-    logger.info(f"world: {world}, body: {body}")
     return {}

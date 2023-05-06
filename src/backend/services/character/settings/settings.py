@@ -5,6 +5,7 @@ from pydantic import BaseSettings
 
 
 class Settings(BaseSettings):
+    log_level: str = "info"
     uvicorn: uvicornx.Settings = uvicornx.Settings()
 
 

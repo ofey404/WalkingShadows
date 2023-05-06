@@ -1,17 +1,19 @@
-import logging
-
 from fastapi import FastAPI
 from libs import uvicornx
 from services.character.routers import tick
 from services.character.settings import get_settings
 
-logger = logging.getLogger(__name__)
-app = FastAPI()
 
-app.include_router(tick.router)
+def create_app() -> FastAPI:
+    app = FastAPI()
+
+    app.include_router(tick.router)
+    return app
+
 
 if __name__ == "__main__":
+    s = get_settings()
     uvicornx.run(
-        app,
-        get_settings().uvicorn,
+        create_app(),
+        s.uvicorn,
     )

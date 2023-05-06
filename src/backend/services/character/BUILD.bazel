@@ -7,6 +7,7 @@ py_library(
     visibility = ["//src/backend/services/character:__subpackages__"],
     deps = [
         "@pip//fastapi",
+        "@pip//loguru",
         "@pip//pydantic",
     ],
 )
