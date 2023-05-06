@@ -51,6 +51,30 @@ manifest:
     aiohttp.web_ws: aiohttp
     aiohttp.worker: aiohttp
     aiosignal: aiosignal
+    anyio: anyio
+    anyio.abc: anyio
+    anyio.from_thread: anyio
+    anyio.lowlevel: anyio
+    anyio.pytest_plugin: anyio
+    anyio.streams: anyio
+    anyio.streams.buffered: anyio
+    anyio.streams.file: anyio
+    anyio.streams.memory: anyio
+    anyio.streams.stapled: anyio
+    anyio.streams.text: anyio
+    anyio.streams.tls: anyio
+    anyio.to_process: anyio
+    anyio.to_thread: anyio
+    asgiref: asgiref
+    asgiref.compatibility: asgiref
+    asgiref.current_thread_executor: asgiref
+    asgiref.local: asgiref
+    asgiref.server: asgiref
+    asgiref.sync: asgiref
+    asgiref.testing: asgiref
+    asgiref.timeout: asgiref
+    asgiref.typing: asgiref
+    asgiref.wsgi: asgiref
     async_timeout: async_timeout
     attr: attrs
     attr.converters: attrs
@@ -94,51 +118,6 @@ manifest:
     click.testing: click
     click.types: click
     click.utils: click
-    clickclick: clickclick
-    clickclick.console: clickclick
-    connexion: connexion
-    connexion.apis: connexion
-    connexion.apis.abstract: connexion
-    connexion.apis.aiohttp_api: connexion
-    connexion.apis.flask_api: connexion
-    connexion.apis.flask_utils: connexion
-    connexion.apps: connexion
-    connexion.apps.abstract: connexion
-    connexion.apps.aiohttp_app: connexion
-    connexion.apps.flask_app: connexion
-    connexion.cli: connexion
-    connexion.decorators: connexion
-    connexion.decorators.coroutine_wrappers: connexion
-    connexion.decorators.decorator: connexion
-    connexion.decorators.metrics: connexion
-    connexion.decorators.parameter: connexion
-    connexion.decorators.produces: connexion
-    connexion.decorators.response: connexion
-    connexion.decorators.uri_parsing: connexion
-    connexion.decorators.validation: connexion
-    connexion.exceptions: connexion
-    connexion.handlers: connexion
-    connexion.http_facts: connexion
-    connexion.json_schema: connexion
-    connexion.jsonifier: connexion
-    connexion.lifecycle: connexion
-    connexion.mock: connexion
-    connexion.operations: connexion
-    connexion.operations.abstract: connexion
-    connexion.operations.compat: connexion
-    connexion.operations.openapi: connexion
-    connexion.operations.secure: connexion
-    connexion.operations.swagger2: connexion
-    connexion.options: connexion
-    connexion.problem: connexion
-    connexion.resolver: connexion
-    connexion.security: connexion
-    connexion.security.aiohttp_security_handler_factory: connexion
-    connexion.security.async_security_handler_factory: connexion
-    connexion.security.flask_security_handler_factory: connexion
-    connexion.security.security_handler_factory: connexion
-    connexion.spec: connexion
-    connexion.utils: connexion
     dataclasses_json: dataclasses_json
     dataclasses_json.api: dataclasses_json
     dataclasses_json.cfg: dataclasses_json
@@ -150,32 +129,48 @@ manifest:
     deprecated: Deprecated
     deprecated.classic: Deprecated
     deprecated.sphinx: Deprecated
-    flask: Flask
-    flask.app: Flask
-    flask.blueprints: Flask
-    flask.cli: Flask
-    flask.config: Flask
-    flask.ctx: Flask
-    flask.debughelpers: Flask
-    flask.globals: Flask
-    flask.helpers: Flask
-    flask.json: Flask
-    flask.json.provider: Flask
-    flask.json.tag: Flask
-    flask.logging: Flask
-    flask.scaffold: Flask
-    flask.sessions: Flask
-    flask.signals: Flask
-    flask.templating: Flask
-    flask.testing: Flask
-    flask.typing: Flask
-    flask.views: Flask
-    flask.wrappers: Flask
-    flask_cors: Flask_Cors
-    flask_cors.core: Flask_Cors
-    flask_cors.decorator: Flask_Cors
-    flask_cors.extension: Flask_Cors
-    flask_cors.version: Flask_Cors
+    fastapi: fastapi
+    fastapi.applications: fastapi
+    fastapi.background: fastapi
+    fastapi.concurrency: fastapi
+    fastapi.datastructures: fastapi
+    fastapi.dependencies: fastapi
+    fastapi.dependencies.models: fastapi
+    fastapi.dependencies.utils: fastapi
+    fastapi.encoders: fastapi
+    fastapi.exception_handlers: fastapi
+    fastapi.exceptions: fastapi
+    fastapi.logger: fastapi
+    fastapi.middleware: fastapi
+    fastapi.middleware.asyncexitstack: fastapi
+    fastapi.middleware.cors: fastapi
+    fastapi.middleware.gzip: fastapi
+    fastapi.middleware.httpsredirect: fastapi
+    fastapi.middleware.trustedhost: fastapi
+    fastapi.middleware.wsgi: fastapi
+    fastapi.openapi: fastapi
+    fastapi.openapi.constants: fastapi
+    fastapi.openapi.docs: fastapi
+    fastapi.openapi.models: fastapi
+    fastapi.openapi.utils: fastapi
+    fastapi.param_functions: fastapi
+    fastapi.params: fastapi
+    fastapi.requests: fastapi
+    fastapi.responses: fastapi
+    fastapi.routing: fastapi
+    fastapi.security: fastapi
+    fastapi.security.api_key: fastapi
+    fastapi.security.base: fastapi
+    fastapi.security.http: fastapi
+    fastapi.security.oauth2: fastapi
+    fastapi.security.open_id_connect_url: fastapi
+    fastapi.security.utils: fastapi
+    fastapi.staticfiles: fastapi
+    fastapi.templating: fastapi
+    fastapi.testclient: fastapi
+    fastapi.types: fastapi
+    fastapi.utils: fastapi
+    fastapi.websockets: fastapi
     frozenlist: frozenlist
     gptcache: gptcache
     gptcache.adapter: gptcache
@@ -233,6 +228,7 @@ manifest:
     gptcache.utils.response: gptcache
     greenlet: greenlet
     greenlet.platform: greenlet
+    h11: h11
     idna: idna
     idna.codec: idna
     idna.compat: idna
@@ -242,45 +238,6 @@ manifest:
     idna.package_data: idna
     idna.uts46data: idna
     importlib_metadata: importlib_metadata
-    inflection: inflection
-    itsdangerous: itsdangerous
-    itsdangerous.encoding: itsdangerous
-    itsdangerous.exc: itsdangerous
-    itsdangerous.serializer: itsdangerous
-    itsdangerous.signer: itsdangerous
-    itsdangerous.timed: itsdangerous
-    itsdangerous.url_safe: itsdangerous
-    jinja2: Jinja2
-    jinja2.async_utils: Jinja2
-    jinja2.bccache: Jinja2
-    jinja2.compiler: Jinja2
-    jinja2.constants: Jinja2
-    jinja2.debug: Jinja2
-    jinja2.defaults: Jinja2
-    jinja2.environment: Jinja2
-    jinja2.exceptions: Jinja2
-    jinja2.ext: Jinja2
-    jinja2.filters: Jinja2
-    jinja2.idtracking: Jinja2
-    jinja2.lexer: Jinja2
-    jinja2.loaders: Jinja2
-    jinja2.meta: Jinja2
-    jinja2.nativetypes: Jinja2
-    jinja2.nodes: Jinja2
-    jinja2.optimizer: Jinja2
-    jinja2.parser: Jinja2
-    jinja2.runtime: Jinja2
-    jinja2.sandbox: Jinja2
-    jinja2.utils: Jinja2
-    jinja2.visitor: Jinja2
-    jsonschema: jsonschema
-    jsonschema.benchmarks: jsonschema
-    jsonschema.benchmarks.issue232: jsonschema
-    jsonschema.benchmarks.json_schema_test_suite: jsonschema
-    jsonschema.cli: jsonschema
-    jsonschema.exceptions: jsonschema
-    jsonschema.protocols: jsonschema
-    jsonschema.validators: jsonschema
     langchain: langchain
     langchain.agents: langchain
     langchain.agents.agent: langchain
@@ -730,7 +687,6 @@ manifest:
     langchain.vectorstores.redis: langchain
     langchain.vectorstores.utils: langchain
     langchain.vectorstores.weaviate: langchain
-    markupsafe: MarkupSafe
     marshmallow: marshmallow
     marshmallow.base: marshmallow
     marshmallow.class_registry: marshmallow
@@ -1089,8 +1045,6 @@ manifest:
     pydantic_yaml.test.test_types: pydantic_yaml
     pydantic_yaml.test.test_versioned: pydantic_yaml
     pydantic_yaml.version: pydantic_yaml
-    pyrsistent: pyrsistent
-    pyrsistent.typing: pyrsistent
     requests: requests
     requests.adapters: requests
     requests.api: requests
@@ -1107,7 +1061,7 @@ manifest:
     requests.status_codes: requests
     requests.structures: requests
     requests.utils: requests
-    six: six
+    sniffio: sniffio
     sqlalchemy: SQLAlchemy
     sqlalchemy.cimmutabledict: SQLAlchemy
     sqlalchemy.connectors: SQLAlchemy
@@ -1345,7 +1299,37 @@ manifest:
     sqlalchemy.util.langhelpers: SQLAlchemy
     sqlalchemy.util.queue: SQLAlchemy
     sqlalchemy.util.topological: SQLAlchemy
-    swagger_ui_bundle: swagger_ui_bundle
+    starlette: starlette
+    starlette.applications: starlette
+    starlette.authentication: starlette
+    starlette.background: starlette
+    starlette.concurrency: starlette
+    starlette.config: starlette
+    starlette.convertors: starlette
+    starlette.datastructures: starlette
+    starlette.endpoints: starlette
+    starlette.exceptions: starlette
+    starlette.formparsers: starlette
+    starlette.middleware: starlette
+    starlette.middleware.authentication: starlette
+    starlette.middleware.base: starlette
+    starlette.middleware.cors: starlette
+    starlette.middleware.errors: starlette
+    starlette.middleware.gzip: starlette
+    starlette.middleware.httpsredirect: starlette
+    starlette.middleware.sessions: starlette
+    starlette.middleware.trustedhost: starlette
+    starlette.middleware.wsgi: starlette
+    starlette.requests: starlette
+    starlette.responses: starlette
+    starlette.routing: starlette
+    starlette.schemas: starlette
+    starlette.staticfiles: starlette
+    starlette.status: starlette
+    starlette.templating: starlette
+    starlette.testclient: starlette
+    starlette.types: starlette
+    starlette.websockets: starlette
     tenacity: tenacity
     tenacity.after: tenacity
     tenacity.before: tenacity
@@ -1422,46 +1406,43 @@ manifest:
     urllib3.util.timeout: urllib3
     urllib3.util.url: urllib3
     urllib3.util.wait: urllib3
-    werkzeug: Werkzeug
-    werkzeug.datastructures: Werkzeug
-    werkzeug.debug: Werkzeug
-    werkzeug.debug.console: Werkzeug
-    werkzeug.debug.repr: Werkzeug
-    werkzeug.debug.tbtools: Werkzeug
-    werkzeug.exceptions: Werkzeug
-    werkzeug.formparser: Werkzeug
-    werkzeug.http: Werkzeug
-    werkzeug.local: Werkzeug
-    werkzeug.middleware: Werkzeug
-    werkzeug.middleware.dispatcher: Werkzeug
-    werkzeug.middleware.http_proxy: Werkzeug
-    werkzeug.middleware.lint: Werkzeug
-    werkzeug.middleware.profiler: Werkzeug
-    werkzeug.middleware.proxy_fix: Werkzeug
-    werkzeug.middleware.shared_data: Werkzeug
-    werkzeug.routing: Werkzeug
-    werkzeug.routing.converters: Werkzeug
-    werkzeug.routing.exceptions: Werkzeug
-    werkzeug.routing.map: Werkzeug
-    werkzeug.routing.matcher: Werkzeug
-    werkzeug.routing.rules: Werkzeug
-    werkzeug.sansio: Werkzeug
-    werkzeug.sansio.http: Werkzeug
-    werkzeug.sansio.multipart: Werkzeug
-    werkzeug.sansio.request: Werkzeug
-    werkzeug.sansio.response: Werkzeug
-    werkzeug.sansio.utils: Werkzeug
-    werkzeug.security: Werkzeug
-    werkzeug.serving: Werkzeug
-    werkzeug.test: Werkzeug
-    werkzeug.testapp: Werkzeug
-    werkzeug.urls: Werkzeug
-    werkzeug.user_agent: Werkzeug
-    werkzeug.utils: Werkzeug
-    werkzeug.wrappers: Werkzeug
-    werkzeug.wrappers.request: Werkzeug
-    werkzeug.wrappers.response: Werkzeug
-    werkzeug.wsgi: Werkzeug
+    uvicorn: uvicorn
+    uvicorn.config: uvicorn
+    uvicorn.importer: uvicorn
+    uvicorn.lifespan: uvicorn
+    uvicorn.lifespan.off: uvicorn
+    uvicorn.lifespan.on: uvicorn
+    uvicorn.logging: uvicorn
+    uvicorn.loops: uvicorn
+    uvicorn.loops.asyncio: uvicorn
+    uvicorn.loops.auto: uvicorn
+    uvicorn.loops.uvloop: uvicorn
+    uvicorn.main: uvicorn
+    uvicorn.middleware: uvicorn
+    uvicorn.middleware.asgi2: uvicorn
+    uvicorn.middleware.debug: uvicorn
+    uvicorn.middleware.message_logger: uvicorn
+    uvicorn.middleware.proxy_headers: uvicorn
+    uvicorn.middleware.wsgi: uvicorn
+    uvicorn.protocols: uvicorn
+    uvicorn.protocols.http: uvicorn
+    uvicorn.protocols.http.auto: uvicorn
+    uvicorn.protocols.http.flow_control: uvicorn
+    uvicorn.protocols.http.h11_impl: uvicorn
+    uvicorn.protocols.http.httptools_impl: uvicorn
+    uvicorn.protocols.utils: uvicorn
+    uvicorn.protocols.websockets: uvicorn
+    uvicorn.protocols.websockets.auto: uvicorn
+    uvicorn.protocols.websockets.websockets_impl: uvicorn
+    uvicorn.protocols.websockets.wsproto_impl: uvicorn
+    uvicorn.server: uvicorn
+    uvicorn.subprocess: uvicorn
+    uvicorn.supervisors: uvicorn
+    uvicorn.supervisors.basereload: uvicorn
+    uvicorn.supervisors.multiprocess: uvicorn
+    uvicorn.supervisors.statreload: uvicorn
+    uvicorn.supervisors.watchgodreload: uvicorn
+    uvicorn.workers: uvicorn
     wrapt: wrapt
     wrapt.arguments: wrapt
     wrapt.decorators: wrapt
@@ -1490,4 +1471,4 @@ manifest:
   pip_repository:
     name: pip
     use_pip_repository_aliases: true
-integrity: 91294f6ab5aebf49d0c9a31824b84e5c9db7958f2ad90a948759fab9adc780df
+integrity: ea084128a90c241a00abce1ba66589b1f5632e491f39c338e9bcccb47c32032d

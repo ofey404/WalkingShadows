@@ -1,0 +1,26 @@
+load("@rules_python//python:defs.bzl", "py_binary", "py_library")
+
+py_library(
+    name = "character",
+    srcs = ["routers/tick.py"],
+    imports = ["../.."],
+    visibility = ["//src/backend/services/character:__subpackages__"],
+    deps = [
+        "@pip//fastapi",
+        "@pip//pydantic",
+    ],
+)
+
+py_binary(
+    name = "character_bin",
+    srcs = ["__main__.py"],
+    imports = ["../.."],
+    main = "__main__.py",
+    visibility = ["//src/backend/services/character:__subpackages__"],
+    deps = [
+        ":character",
+        "//src/backend/services/character/settings",
+        "@pip//fastapi",
+        "@pip//uvicorn",
+    ],
+)
