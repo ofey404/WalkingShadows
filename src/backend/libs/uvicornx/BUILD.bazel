@@ -1,17 +1,15 @@
 load("@rules_python//python:defs.bzl", "py_library")
 
 py_library(
-    name = "schema",
+    name = "uvicornx",
     srcs = [
         "__init__.py",
-        "config.py",
-        "service_context.py",
+        "settings.py",
     ],
-    imports = [".."],
+    imports = ["../.."],
     visibility = ["//src/backend:__subpackages__"],
     deps = [
-        "@pip//langchain",
         "@pip//pydantic",
-        "@pip//pydantic_yaml",
+        "@pip//uvicorn",
     ],
 )

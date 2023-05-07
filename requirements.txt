@@ -1,0 +1,9 @@
+langchain==0.0.160
+pydantic==1.10.7
+pydantic_yaml==0.11.2
+fastapi==0.95.1
+uvicorn==0.22.0
+loguru==0.7.0
+pytest==7.3.1
+pytest-asyncio==0.21.0
+httpx==0.24.0

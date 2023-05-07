@@ -1,15 +1,12 @@
 load("@rules_python//python:defs.bzl", "py_library")
 
 py_library(
-    name = "logic",
+    name = "server",
     srcs = [
         "__init__.py",
-        "note.py",
+        "app.py",
     ],
-    imports = [".."],
+    imports = ["../../.."],
     visibility = ["//src/backend:__subpackages__"],
-    deps = [
-        "//src/backend/schema",
-        "@pip//pydantic",
-    ],
+    deps = ["@pip//fastapi"],
 )
