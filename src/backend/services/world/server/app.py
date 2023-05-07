@@ -1,8 +1,9 @@
 from fastapi import APIRouter, FastAPI
 
 
-def create_app(*router: APIRouter) -> FastAPI:
+def create_app(*routers: APIRouter) -> FastAPI:
     app = FastAPI()
 
-    app.include_router(*router)
+    for r in routers:
+        app.include_router(r)
     return app
