@@ -1,0 +1,8 @@
+load("@rules_python//python:defs.bzl", "py_library")
+
+py_library(
+    name = "testx",
+    srcs = ["__init__.py"],
+    imports = ["../.."],
+    visibility = ["//src/backend:__subpackages__"],
+)

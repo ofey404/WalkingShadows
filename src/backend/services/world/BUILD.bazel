@@ -1,4 +1,4 @@
-load("@rules_python//python:defs.bzl", "py_binary")
+load("@rules_python//python:defs.bzl", "py_binary", "py_library")
 
 py_binary(
     name = "world_bin",
@@ -9,7 +9,15 @@ py_binary(
     deps = [
         "//src/backend/libs/uvicornx",
         "//src/backend/services/world/api/world",
-        "//src/backend/services/world/server",
+        "//src/backend/services/world/app",
         "//src/backend/services/world/settings",
     ],
+)
+
+py_library(
+    name = "world",
+    srcs = ["internal/models/character.py"],
+    imports = ["../.."],
+    visibility = ["//src/backend:__subpackages__"],
+    deps = ["@pip//beanie"],
 )
