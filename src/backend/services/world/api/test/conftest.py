@@ -4,7 +4,7 @@ from services.world.api import tick
 from services.world.server import create_app
 
 
-@pytest_asyncio.fixture
+@pytest_asyncio.fixture(scope="session")
 async def client() -> httpx.AsyncClient:
     async with httpx.AsyncClient(
         app=create_app(
