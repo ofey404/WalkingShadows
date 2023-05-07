@@ -25,6 +25,9 @@ class TestMongo(unittest.IsolatedAsyncioTestCase):
             self.assertIsNotNone(d2)
             self.assertEqual(d2.content, "test")
 
+            d3 = await TestDocument.find_one({"content": "not exist"})
+            self.assertIsNone(d3)
+
 
 if __name__ == "__main__":
     unittest.main()

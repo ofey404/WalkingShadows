@@ -32,8 +32,7 @@ async def handle_create(
     body: WorldCreateRequest,
 ) -> dict:
     if not body.overwrite:
-        existed = World.find_one({"name": world_name})
-        if existed:
+        if World.find_one({"name": world_name}) is not None:
             raise HTTPException(
                 status_code=status.HTTP_400_BAD_REQUEST,
                 detail=f"world {world_name} already exists",
