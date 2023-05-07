@@ -1,4 +1,4 @@
-load("@rules_python//python:defs.bzl", "py_binary", "py_library")
+load("@rules_python//python:defs.bzl", "py_binary")
 load("@io_bazel_rules_docker//python3:image.bzl", "py3_image")
 
 py_binary(
@@ -27,15 +27,4 @@ py3_image(
         "//src/backend/services/world/app",
         "//src/backend/services/world/settings",
     ],
-)
-
-py_library(
-    name = "world",
-    srcs = [
-        "internal/models/character.py",
-        "internal/models/world.py",
-    ],
-    imports = ["../.."],
-    visibility = ["//src/backend:__subpackages__"],
-    deps = ["@pip//beanie"],
 )

@@ -8,5 +8,10 @@ py_library(
     ],
     imports = ["../../.."],
     visibility = ["//src/backend:__subpackages__"],
-    deps = ["@pip//fastapi"],
+    deps = [
+        "//src/backend/libs/mongox",
+        "//src/backend/services/world/internal/models",
+        "//src/backend/services/world/settings",
+        "@pip//fastapi",
+    ],
 )

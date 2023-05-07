@@ -12,8 +12,8 @@ services:
     networks:
       - backend
     volumes:
-      - ./data/mongodb:/data/db
-      - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+      - /tmp/walkingshadows/data/mongodb:/data/db
+      - /tmp/walkingshadows/data/init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
 
   ws-world:
     image: ws-world:latest
