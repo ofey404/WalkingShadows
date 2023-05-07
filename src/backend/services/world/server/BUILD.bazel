@@ -1,0 +1,12 @@
+load("@rules_python//python:defs.bzl", "py_library")
+
+py_library(
+    name = "server",
+    srcs = [
+        "__init__.py",
+        "app.py",
+    ],
+    imports = ["../../.."],
+    visibility = ["//src/backend:__subpackages__"],
+    deps = ["@pip//fastapi"],
+)

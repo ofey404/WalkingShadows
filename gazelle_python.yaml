@@ -116,6 +116,7 @@ manifest:
     deprecated: Deprecated
     deprecated.classic: Deprecated
     deprecated.sphinx: Deprecated
+    exceptiongroup: exceptiongroup
     fastapi: fastapi
     fastapi.applications: fastapi
     fastapi.background: fastapi
@@ -162,6 +163,15 @@ manifest:
     greenlet: greenlet
     greenlet.platform: greenlet
     h11: h11
+    httpcore: httpcore
+    httpcore.backends: httpcore
+    httpcore.backends.asyncio: httpcore
+    httpcore.backends.auto: httpcore
+    httpcore.backends.base: httpcore
+    httpcore.backends.mock: httpcore
+    httpcore.backends.sync: httpcore
+    httpcore.backends.trio: httpcore
+    httpx: httpx
     idna: idna
     idna.codec: idna
     idna.compat: idna
@@ -171,6 +181,8 @@ manifest:
     idna.package_data: idna
     idna.uts46data: idna
     importlib_metadata: importlib_metadata
+    iniconfig: iniconfig
+    iniconfig.exceptions: iniconfig
     langchain: langchain
     langchain.agents: langchain
     langchain.agents.agent: langchain
@@ -1051,6 +1063,8 @@ manifest:
     packaging.tags: packaging
     packaging.utils: packaging
     packaging.version: packaging
+    pluggy: pluggy
+    py: pytest
     pydantic: pydantic
     pydantic.annotated_types: pydantic
     pydantic.class_validators: pydantic
@@ -1099,6 +1113,9 @@ manifest:
     pydantic_yaml.test.test_types: pydantic_yaml
     pydantic_yaml.test.test_versioned: pydantic_yaml
     pydantic_yaml.version: pydantic_yaml
+    pytest: pytest
+    pytest_asyncio: pytest_asyncio
+    pytest_asyncio.plugin: pytest_asyncio
     requests: requests
     requests.adapters: requests
     requests.api: requests
@@ -1404,6 +1421,7 @@ manifest:
     tests.v3_0_3.test_config_example: openapi_schema_pydantic
     tests.v3_0_3.test_util: openapi_schema_pydantic
     tests.v3_1_0: openapi_schema_pydantic
+    tomli: tomli
     tqdm: tqdm
     tqdm.asyncio: tqdm
     tqdm.auto: tqdm
@@ -1525,4 +1543,4 @@ manifest:
   pip_repository:
     name: pip
     use_pip_repository_aliases: true
-integrity: 0785ce3e5c69bdb4653a042e13b652a491c6983f6c553139aaa1893b33d63916
+integrity: 47bfdaf5bcb6934157ca458eda506fbc5946d86478ef1e16154edca54476ebce

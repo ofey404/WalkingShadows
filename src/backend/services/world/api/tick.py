@@ -17,7 +17,7 @@ class TickResponse(BaseModel):
     "/api/world/{world}/tick",
     response_model=TickResponse,
 )
-def handle_tick(
+async def handle_tick(
     world: str,
     body: TickRequest,
 ) -> dict:

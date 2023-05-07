@@ -1,1 +1,9 @@
+load("@rules_python//python:defs.bzl", "py_library")
+
 # gazelle:python_root
+
+py_library(
+    name = "backend",
+    srcs = ["__init__.py"],
+    visibility = ["//src/backend:__subpackages__"],
+)

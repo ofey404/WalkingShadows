@@ -7,4 +7,4 @@ SERVICE_ROOT="${SCRIPT_DIR}/.."
 
 cd "$SERVICE_ROOT"
 
-bazel run //src/backend/services/character:character_bin
+bazel run //src/backend/services/world:world_bin
