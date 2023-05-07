@@ -1,12 +1,20 @@
 from fastapi import APIRouter
+from pydantic import BaseModel
 
 router = APIRouter()
 
 
-@router.post(
-    "/api/world/{world}/event",
-)
-async def handle_event(
+class EventGetRequest(BaseModel):
+    ...
+
+
+class EventGetResponse(BaseModel):
+    ...
+
+
+@router.post("/api/world/{world}/event/get", responses={})
+async def handle_event_get(
     world: str,
+    body: EventGetRequest,
 ) -> dict:
     return {}

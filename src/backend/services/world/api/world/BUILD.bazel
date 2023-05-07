@@ -11,6 +11,7 @@ py_library(
     imports = ["../../../.."],
     visibility = ["//src/backend:__subpackages__"],
     deps = [
+        "//src/backend/libs/errx",
         "@pip//fastapi",
         "@pip//loguru",
         "@pip//pydantic",

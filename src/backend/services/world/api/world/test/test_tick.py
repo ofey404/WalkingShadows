@@ -1,8 +1,7 @@
 import unittest
 
 import httpx
-import services.world.api.world
-from services.world.api.world import tick
+from services.world.api import world
 from services.world.api.world.tick import TickRequest
 from services.world.server import create_app
 
@@ -11,7 +10,7 @@ class TestTick(unittest.IsolatedAsyncioTestCase):
     def setUp(self):
         self.client = httpx.AsyncClient(
             app=create_app(
-                services.world.api.world.router,
+                world.tick_router,
             ),
             base_url="http://app",
         )
