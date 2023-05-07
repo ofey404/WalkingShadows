@@ -1,8 +1,7 @@
-from fastapi import APIRouter, HTTPException, status
+from fastapi import HTTPException, status
 from loguru import logger
 from pydantic import BaseModel
-
-router = APIRouter()
+from services.world.api.world import router
 
 
 class TickRequest(BaseModel):
