@@ -9,10 +9,9 @@ py_test(
     imports = ["../../../.."],
     main = "__test__.py",
     deps = [
-        ":conftest",
         "//src/backend/services/world",
+        "//src/backend/services/world/server",
         "@pip//httpx",
-        "@pip//pytest",
     ],
 )
 
