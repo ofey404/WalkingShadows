@@ -78,6 +78,96 @@ manifest:
     attrs.filters: attrs
     attrs.setters: attrs
     attrs.validators: attrs
+    beanie: beanie
+    beanie.exceptions: beanie
+    beanie.executors: beanie
+    beanie.executors.migrate: beanie
+    beanie.migrations: beanie
+    beanie.migrations.controllers: beanie
+    beanie.migrations.controllers.base: beanie
+    beanie.migrations.controllers.free_fall: beanie
+    beanie.migrations.controllers.iterative: beanie
+    beanie.migrations.database: beanie
+    beanie.migrations.models: beanie
+    beanie.migrations.runner: beanie
+    beanie.migrations.template: beanie
+    beanie.migrations.utils: beanie
+    beanie.odm: beanie
+    beanie.odm.actions: beanie
+    beanie.odm.bulk: beanie
+    beanie.odm.cache: beanie
+    beanie.odm.documents: beanie
+    beanie.odm.enums: beanie
+    beanie.odm.fields: beanie
+    beanie.odm.interfaces: beanie
+    beanie.odm.interfaces.aggregate: beanie
+    beanie.odm.interfaces.aggregation_methods: beanie
+    beanie.odm.interfaces.clone: beanie
+    beanie.odm.interfaces.detector: beanie
+    beanie.odm.interfaces.find: beanie
+    beanie.odm.interfaces.getters: beanie
+    beanie.odm.interfaces.inheritance: beanie
+    beanie.odm.interfaces.session: beanie
+    beanie.odm.interfaces.setters: beanie
+    beanie.odm.interfaces.update: beanie
+    beanie.odm.models: beanie
+    beanie.odm.operators: beanie
+    beanie.odm.operators.find: beanie
+    beanie.odm.operators.find.array: beanie
+    beanie.odm.operators.find.bitwise: beanie
+    beanie.odm.operators.find.comparison: beanie
+    beanie.odm.operators.find.element: beanie
+    beanie.odm.operators.find.evaluation: beanie
+    beanie.odm.operators.find.geospatial: beanie
+    beanie.odm.operators.find.logical: beanie
+    beanie.odm.operators.update: beanie
+    beanie.odm.operators.update.array: beanie
+    beanie.odm.operators.update.bitwise: beanie
+    beanie.odm.operators.update.general: beanie
+    beanie.odm.queries: beanie
+    beanie.odm.queries.aggregation: beanie
+    beanie.odm.queries.cursor: beanie
+    beanie.odm.queries.delete: beanie
+    beanie.odm.queries.find: beanie
+    beanie.odm.queries.update: beanie
+    beanie.odm.settings: beanie
+    beanie.odm.settings.base: beanie
+    beanie.odm.settings.document: beanie
+    beanie.odm.settings.timeseries: beanie
+    beanie.odm.settings.union_doc: beanie
+    beanie.odm.settings.view: beanie
+    beanie.odm.union_doc: beanie
+    beanie.odm.utils: beanie
+    beanie.odm.utils.dump: beanie
+    beanie.odm.utils.encoder: beanie
+    beanie.odm.utils.find: beanie
+    beanie.odm.utils.general: beanie
+    beanie.odm.utils.init: beanie
+    beanie.odm.utils.parsing: beanie
+    beanie.odm.utils.projection: beanie
+    beanie.odm.utils.relations: beanie
+    beanie.odm.utils.self_validation: beanie
+    beanie.odm.utils.state: beanie
+    beanie.odm.views: beanie
+    beanie.operators: beanie
+    bson: pymongo
+    bson.binary: pymongo
+    bson.code: pymongo
+    bson.codec_options: pymongo
+    bson.datetime_ms: pymongo
+    bson.dbref: pymongo
+    bson.decimal128: pymongo
+    bson.errors: pymongo
+    bson.int64: pymongo
+    bson.json_util: pymongo
+    bson.max_key: pymongo
+    bson.min_key: pymongo
+    bson.objectid: pymongo
+    bson.raw_bson: pymongo
+    bson.regex: pymongo
+    bson.son: pymongo
+    bson.timestamp: pymongo
+    bson.tz_util: pymongo
     certifi: certifi
     certifi.core: certifi
     charset_normalizer: charset_normalizer
@@ -116,6 +206,198 @@ manifest:
     deprecated: Deprecated
     deprecated.classic: Deprecated
     deprecated.sphinx: Deprecated
+    deprecation: deprecation
+    dns: dnspython
+    dns.asyncbackend: dnspython
+    dns.asyncquery: dnspython
+    dns.asyncresolver: dnspython
+    dns.dnssec: dnspython
+    dns.dnssectypes: dnspython
+    dns.e164: dnspython
+    dns.edns: dnspython
+    dns.entropy: dnspython
+    dns.enum: dnspython
+    dns.exception: dnspython
+    dns.flags: dnspython
+    dns.grange: dnspython
+    dns.immutable: dnspython
+    dns.inet: dnspython
+    dns.ipv4: dnspython
+    dns.ipv6: dnspython
+    dns.message: dnspython
+    dns.name: dnspython
+    dns.namedict: dnspython
+    dns.node: dnspython
+    dns.opcode: dnspython
+    dns.query: dnspython
+    dns.quic: dnspython
+    dns.rcode: dnspython
+    dns.rdata: dnspython
+    dns.rdataclass: dnspython
+    dns.rdataset: dnspython
+    dns.rdatatype: dnspython
+    dns.rdtypes: dnspython
+    dns.rdtypes.ANY: dnspython
+    dns.rdtypes.ANY.AFSDB: dnspython
+    dns.rdtypes.ANY.AMTRELAY: dnspython
+    dns.rdtypes.ANY.AVC: dnspython
+    dns.rdtypes.ANY.CAA: dnspython
+    dns.rdtypes.ANY.CDNSKEY: dnspython
+    dns.rdtypes.ANY.CDS: dnspython
+    dns.rdtypes.ANY.CERT: dnspython
+    dns.rdtypes.ANY.CNAME: dnspython
+    dns.rdtypes.ANY.CSYNC: dnspython
+    dns.rdtypes.ANY.DLV: dnspython
+    dns.rdtypes.ANY.DNAME: dnspython
+    dns.rdtypes.ANY.DNSKEY: dnspython
+    dns.rdtypes.ANY.DS: dnspython
+    dns.rdtypes.ANY.EUI48: dnspython
+    dns.rdtypes.ANY.EUI64: dnspython
+    dns.rdtypes.ANY.GPOS: dnspython
+    dns.rdtypes.ANY.HINFO: dnspython
+    dns.rdtypes.ANY.HIP: dnspython
+    dns.rdtypes.ANY.ISDN: dnspython
+    dns.rdtypes.ANY.L32: dnspython
+    dns.rdtypes.ANY.L64: dnspython
+    dns.rdtypes.ANY.LOC: dnspython
+    dns.rdtypes.ANY.LP: dnspython
+    dns.rdtypes.ANY.MX: dnspython
+    dns.rdtypes.ANY.NID: dnspython
+    dns.rdtypes.ANY.NINFO: dnspython
+    dns.rdtypes.ANY.NS: dnspython
+    dns.rdtypes.ANY.NSEC: dnspython
+    dns.rdtypes.ANY.NSEC3: dnspython
+    dns.rdtypes.ANY.NSEC3PARAM: dnspython
+    dns.rdtypes.ANY.OPENPGPKEY: dnspython
+    dns.rdtypes.ANY.OPT: dnspython
+    dns.rdtypes.ANY.PTR: dnspython
+    dns.rdtypes.ANY.RP: dnspython
+    dns.rdtypes.ANY.RRSIG: dnspython
+    dns.rdtypes.ANY.RT: dnspython
+    dns.rdtypes.ANY.SMIMEA: dnspython
+    dns.rdtypes.ANY.SOA: dnspython
+    dns.rdtypes.ANY.SPF: dnspython
+    dns.rdtypes.ANY.SSHFP: dnspython
+    dns.rdtypes.ANY.TKEY: dnspython
+    dns.rdtypes.ANY.TLSA: dnspython
+    dns.rdtypes.ANY.TSIG: dnspython
+    dns.rdtypes.ANY.TXT: dnspython
+    dns.rdtypes.ANY.URI: dnspython
+    dns.rdtypes.ANY.X25: dnspython
+    dns.rdtypes.ANY.ZONEMD: dnspython
+    dns.rdtypes.CH: dnspython
+    dns.rdtypes.CH.A: dnspython
+    dns.rdtypes.IN: dnspython
+    dns.rdtypes.IN.A: dnspython
+    dns.rdtypes.IN.AAAA: dnspython
+    dns.rdtypes.IN.APL: dnspython
+    dns.rdtypes.IN.DHCID: dnspython
+    dns.rdtypes.IN.HTTPS: dnspython
+    dns.rdtypes.IN.IPSECKEY: dnspython
+    dns.rdtypes.IN.KX: dnspython
+    dns.rdtypes.IN.NAPTR: dnspython
+    dns.rdtypes.IN.NSAP: dnspython
+    dns.rdtypes.IN.NSAP_PTR: dnspython
+    dns.rdtypes.IN.PX: dnspython
+    dns.rdtypes.IN.SRV: dnspython
+    dns.rdtypes.IN.SVCB: dnspython
+    dns.rdtypes.IN.WKS: dnspython
+    dns.rdtypes.dnskeybase: dnspython
+    dns.rdtypes.dsbase: dnspython
+    dns.rdtypes.euibase: dnspython
+    dns.rdtypes.mxbase: dnspython
+    dns.rdtypes.nsbase: dnspython
+    dns.rdtypes.svcbbase: dnspython
+    dns.rdtypes.tlsabase: dnspython
+    dns.rdtypes.txtbase: dnspython
+    dns.rdtypes.util: dnspython
+    dns.renderer: dnspython
+    dns.resolver: dnspython
+    dns.reversename: dnspython
+    dns.rrset: dnspython
+    dns.serial: dnspython
+    dns.set: dnspython
+    dns.tokenizer: dnspython
+    dns.transaction: dnspython
+    dns.tsig: dnspython
+    dns.tsigkeyring: dnspython
+    dns.ttl: dnspython
+    dns.update: dnspython
+    dns.version: dnspython
+    dns.versioned: dnspython
+    dns.win32util: dnspython
+    dns.wire: dnspython
+    dns.xfr: dnspython
+    dns.zone: dnspython
+    dns.zonefile: dnspython
+    dns.zonetypes: dnspython
+    docker: docker
+    docker.api: docker
+    docker.api.build: docker
+    docker.api.client: docker
+    docker.api.config: docker
+    docker.api.container: docker
+    docker.api.daemon: docker
+    docker.api.exec_api: docker
+    docker.api.image: docker
+    docker.api.network: docker
+    docker.api.plugin: docker
+    docker.api.secret: docker
+    docker.api.service: docker
+    docker.api.swarm: docker
+    docker.api.volume: docker
+    docker.auth: docker
+    docker.client: docker
+    docker.constants: docker
+    docker.context: docker
+    docker.context.api: docker
+    docker.context.config: docker
+    docker.context.context: docker
+    docker.credentials: docker
+    docker.credentials.constants: docker
+    docker.credentials.errors: docker
+    docker.credentials.store: docker
+    docker.credentials.utils: docker
+    docker.errors: docker
+    docker.models: docker
+    docker.models.configs: docker
+    docker.models.containers: docker
+    docker.models.images: docker
+    docker.models.networks: docker
+    docker.models.nodes: docker
+    docker.models.plugins: docker
+    docker.models.resource: docker
+    docker.models.secrets: docker
+    docker.models.services: docker
+    docker.models.swarm: docker
+    docker.models.volumes: docker
+    docker.tls: docker
+    docker.transport: docker
+    docker.transport.basehttpadapter: docker
+    docker.transport.npipeconn: docker
+    docker.transport.npipesocket: docker
+    docker.transport.sshconn: docker
+    docker.transport.ssladapter: docker
+    docker.transport.unixconn: docker
+    docker.types: docker
+    docker.types.base: docker
+    docker.types.containers: docker
+    docker.types.daemon: docker
+    docker.types.healthcheck: docker
+    docker.types.networks: docker
+    docker.types.services: docker
+    docker.types.swarm: docker
+    docker.utils: docker
+    docker.utils.build: docker
+    docker.utils.config: docker
+    docker.utils.decorators: docker
+    docker.utils.fnmatch: docker
+    docker.utils.json_stream: docker
+    docker.utils.ports: docker
+    docker.utils.proxy: docker
+    docker.utils.socket: docker
+    docker.utils.utils: docker
+    docker.version: docker
     exceptiongroup: exceptiongroup
     fastapi: fastapi
     fastapi.applications: fastapi
@@ -162,6 +444,9 @@ manifest:
     frozenlist: frozenlist
     greenlet: greenlet
     greenlet.platform: greenlet
+    gridfs: pymongo
+    gridfs.errors: pymongo
+    gridfs.grid_file: pymongo
     h11: h11
     httpcore: httpcore
     httpcore.backends: httpcore
@@ -791,6 +1076,8 @@ manifest:
     langchain.vectorstores.utils: langchain
     langchain.vectorstores.weaviate: langchain
     langchain.vectorstores.zilliz: langchain
+    lazy_model: lazy_model
+    lazy_model.main: lazy_model
     loguru: loguru
     marshmallow: marshmallow
     marshmallow.base: marshmallow
@@ -806,6 +1093,19 @@ manifest:
     marshmallow.validate: marshmallow
     marshmallow.warnings: marshmallow
     marshmallow_enum: marshmallow_enum
+    motor: motor
+    motor.aiohttp: motor
+    motor.core: motor
+    motor.docstrings: motor
+    motor.frameworks: motor
+    motor.frameworks.asyncio: motor
+    motor.frameworks.tornado: motor
+    motor.metaprogramming: motor
+    motor.motor_asyncio: motor
+    motor.motor_common: motor
+    motor.motor_gridfs: motor
+    motor.motor_tornado: motor
+    motor.web: motor
     multidict: multidict
     mypy_extensions: mypy_extensions
     numexpr: numexpr
@@ -1113,6 +1413,62 @@ manifest:
     pydantic_yaml.test.test_types: pydantic_yaml
     pydantic_yaml.test.test_versioned: pydantic_yaml
     pydantic_yaml.version: pydantic_yaml
+    pymongo: pymongo
+    pymongo.aggregation: pymongo
+    pymongo.auth: pymongo
+    pymongo.auth_aws: pymongo
+    pymongo.bulk: pymongo
+    pymongo.change_stream: pymongo
+    pymongo.client_options: pymongo
+    pymongo.client_session: pymongo
+    pymongo.collation: pymongo
+    pymongo.collection: pymongo
+    pymongo.command_cursor: pymongo
+    pymongo.common: pymongo
+    pymongo.compression_support: pymongo
+    pymongo.cursor: pymongo
+    pymongo.daemon: pymongo
+    pymongo.database: pymongo
+    pymongo.driver_info: pymongo
+    pymongo.encryption: pymongo
+    pymongo.encryption_options: pymongo
+    pymongo.errors: pymongo
+    pymongo.event_loggers: pymongo
+    pymongo.hello: pymongo
+    pymongo.helpers: pymongo
+    pymongo.lock: pymongo
+    pymongo.max_staleness_selectors: pymongo
+    pymongo.message: pymongo
+    pymongo.mongo_client: pymongo
+    pymongo.monitor: pymongo
+    pymongo.monitoring: pymongo
+    pymongo.network: pymongo
+    pymongo.ocsp_cache: pymongo
+    pymongo.ocsp_support: pymongo
+    pymongo.operations: pymongo
+    pymongo.periodic_executor: pymongo
+    pymongo.pool: pymongo
+    pymongo.pyopenssl_context: pymongo
+    pymongo.read_concern: pymongo
+    pymongo.read_preferences: pymongo
+    pymongo.response: pymongo
+    pymongo.results: pymongo
+    pymongo.saslprep: pymongo
+    pymongo.server: pymongo
+    pymongo.server_api: pymongo
+    pymongo.server_description: pymongo
+    pymongo.server_selectors: pymongo
+    pymongo.server_type: pymongo
+    pymongo.settings: pymongo
+    pymongo.socket_checker: pymongo
+    pymongo.srv_resolver: pymongo
+    pymongo.ssl_context: pymongo
+    pymongo.ssl_support: pymongo
+    pymongo.topology: pymongo
+    pymongo.topology_description: pymongo
+    pymongo.typings: pymongo
+    pymongo.uri_parser: pymongo
+    pymongo.write_concern: pymongo
     pytest: pytest
     pytest_asyncio: pytest_asyncio
     pytest_asyncio.plugin: pytest_asyncio
@@ -1411,9 +1767,45 @@ manifest:
     tenacity.stop: tenacity
     tenacity.tornadoweb: tenacity
     tenacity.wait: tenacity
+    testcontainers: testcontainers
+    testcontainers.arangodb: testcontainers
+    testcontainers.azurite: testcontainers
+    testcontainers.clickhouse: testcontainers
+    testcontainers.compose: testcontainers
+    testcontainers.core: testcontainers
+    testcontainers.core.config: testcontainers
+    testcontainers.core.container: testcontainers
+    testcontainers.core.docker_client: testcontainers
+    testcontainers.core.exceptions: testcontainers
+    testcontainers.core.generic: testcontainers
+    testcontainers.core.utils: testcontainers
+    testcontainers.core.waiting_utils: testcontainers
+    testcontainers.elasticsearch: testcontainers
+    testcontainers.general: testcontainers
+    testcontainers.google: testcontainers
+    testcontainers.google.pubsub: testcontainers
+    testcontainers.kafka: testcontainers
+    testcontainers.keycloak: testcontainers
+    testcontainers.localstack: testcontainers
+    testcontainers.mongodb: testcontainers
+    testcontainers.mssql: testcontainers
+    testcontainers.mysql: testcontainers
+    testcontainers.neo4j: testcontainers
+    testcontainers.nginx: testcontainers
+    testcontainers.oracle: testcontainers
+    testcontainers.postgres: testcontainers
+    testcontainers.rabbitmq: testcontainers
+    testcontainers.redis: testcontainers
+    testcontainers.selenium: testcontainers
     tests.schema_classes: openapi_schema_pydantic
     tests.schema_classes.test_schema: openapi_schema_pydantic
     tests.schema_classes.test_security_scheme: openapi_schema_pydantic
+    tests.test_core: testcontainers
+    tests.test_core.test_core: testcontainers
+    tests.test_core.test_db_containers: testcontainers
+    tests.test_core.test_docker_compose: testcontainers
+    tests.test_core.test_docker_in_docker: testcontainers
+    tests.test_core.test_new_docker_api: testcontainers
     tests.util: openapi_schema_pydantic
     tests.util.test_pydantic_field: openapi_schema_pydantic
     tests.util.test_util: openapi_schema_pydantic
@@ -1421,6 +1813,11 @@ manifest:
     tests.v3_0_3.test_config_example: openapi_schema_pydantic
     tests.v3_0_3.test_util: openapi_schema_pydantic
     tests.v3_1_0: openapi_schema_pydantic
+    toml: toml
+    toml.decoder: toml
+    toml.encoder: toml
+    toml.ordered: toml
+    toml.tz: toml
     tomli: tomli
     tqdm: tqdm
     tqdm.asyncio: tqdm
@@ -1515,6 +1912,7 @@ manifest:
     uvicorn.supervisors.watchfilesreload: uvicorn
     uvicorn.supervisors.watchgodreload: uvicorn
     uvicorn.workers: uvicorn
+    websocket: websocket_client
     wrapt: wrapt
     wrapt.arguments: wrapt
     wrapt.decorators: wrapt
@@ -1543,4 +1941,4 @@ manifest:
   pip_repository:
     name: pip
     use_pip_repository_aliases: true
-integrity: 47bfdaf5bcb6934157ca458eda506fbc5946d86478ef1e16154edca54476ebce
+integrity: f6948bfe7f024f302f5f265af8c65070848e1703aba87b6b0056c390ef9f84c9

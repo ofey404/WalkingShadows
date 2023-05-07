@@ -4,13 +4,15 @@ py_test(
     name = "test_test",
     srcs = [
         "__test__.py",
-        "test_tick.py",
+        "test_models.py",
     ],
     imports = ["../../../../.."],
     main = "__test__.py",
     deps = [
-        "//src/backend/services/world/api/world",
-        "//src/backend/services/world/app",
-        "@pip//httpx",
+        "//src/backend/libs/testx",
+        "//src/backend/services/world",
+        "@pip//beanie",
+        "@pip//motor",
+        "@pip//testcontainers",
     ],
 )

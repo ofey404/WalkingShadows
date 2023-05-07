@@ -1,6 +1,6 @@
 from libs import uvicornx
 from services.world.api import world
-from services.world.server import create_app
+from services.world.app import create_app
 from services.world.settings import get_settings
 
 if __name__ == "__main__":
