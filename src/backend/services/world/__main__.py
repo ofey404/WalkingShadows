@@ -9,6 +9,7 @@ if __name__ == "__main__":
         create_app(
             world.tick_router,
             world.event_router,
+            world.memory_router,
         ),
         s.uvicorn,
     )
