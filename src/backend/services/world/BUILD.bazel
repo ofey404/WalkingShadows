@@ -1,7 +1,22 @@
 load("@rules_python//python:defs.bzl", "py_binary", "py_library")
+load("@io_bazel_rules_docker//python3:image.bzl", "py3_image")
 
 py_binary(
     name = "world_bin",
+    srcs = ["__main__.py"],
+    imports = ["../.."],
+    main = "__main__.py",
+    visibility = ["//src/backend:__subpackages__"],
+    deps = [
+        "//src/backend/libs/uvicornx",
+        "//src/backend/services/world/api/world",
+        "//src/backend/services/world/app",
+        "//src/backend/services/world/settings",
+    ],
+)
+
+py3_image(
+    name = "image",
     srcs = ["__main__.py"],
     imports = ["../.."],
     main = "__main__.py",

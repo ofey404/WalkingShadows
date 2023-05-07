@@ -3,8 +3,12 @@
 set -euo pipefail  # fail early
 SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
-SERVICE_ROOT="${SCRIPT_DIR}/.."
+PROJECT_ROOT="${SCRIPT_DIR}/.."
 
-cd "$SERVICE_ROOT"
+cd "$PROJECT_ROOT"
 
-bazel run //src/backend/services/world:world_bin
+./scripts/build_image.sh
+
+pushd src/deploy/local > /dev/null
+  docker-compose up -d
+popd > /dev/null
