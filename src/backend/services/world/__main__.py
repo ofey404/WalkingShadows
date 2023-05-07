@@ -7,7 +7,8 @@ if __name__ == "__main__":
     s = get_settings()
     uvicornx.run(
         create_app(
-            world.router,
+            world.tick_router,
+            world.event_router,
         ),
         s.uvicorn,
     )

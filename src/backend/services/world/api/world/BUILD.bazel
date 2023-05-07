@@ -4,6 +4,8 @@ py_library(
     name = "world",
     srcs = [
         "__init__.py",
+        "event.py",
+        "memory.py",
         "tick.py",
     ],
     imports = ["../../../.."],

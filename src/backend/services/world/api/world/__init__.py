@@ -1,3 +1,7 @@
-from fastapi import APIRouter
+from services.world.api.world.event import router as event_router
+from services.world.api.world.tick import router as tick_router
 
-router = APIRouter()
+__all__ = [
+    tick_router,
+    event_router,
+]
