@@ -1,7 +1,10 @@
-from fastapi import APIRouter, HTTPException, status
+from typing import Annotated
+
+from fastapi import APIRouter, Depends, HTTPException, status
 from libs import errx
 from loguru import logger
 from pydantic import BaseModel
+from services.world.settings import Settings, get_settings
 
 router = APIRouter()
 
@@ -12,6 +15,10 @@ class TickRequest(BaseModel):
 
 class TickResponse(BaseModel):
     ...
+
+
+def get_sub_dependency(settings: Annotated[Settings, Depends(get_settings)]) -> dict:
+    return settings.dict()
 
 
 @router.post(
@@ -26,8 +33,12 @@ class TickResponse(BaseModel):
 async def handle_tick(
     world: str,
     body: TickRequest,
+    settings: Annotated[Settings, Depends(get_settings)],
+    sub_dependency: Annotated[dict, Depends(get_sub_dependency)],
 ) -> dict:
     logger.info(f"world: {world}")
+    logger.info(f"settings: {settings.dict()}")
+    logger.info(f"sub_dependency: {sub_dependency}")
 
     if body.now != "now":
         raise HTTPException(

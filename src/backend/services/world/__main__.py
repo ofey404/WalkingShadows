@@ -10,6 +10,7 @@ if __name__ == "__main__":
             world.tick_router,
             world.event_router,
             world.memory_router,
+            world.crud_router,
         ),
         s.uvicorn,
     )

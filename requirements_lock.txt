@@ -432,7 +432,9 @@ marshmallow-enum==1.5.1 \
 motor==3.1.2 \
     --hash=sha256:4bfc65230853ad61af447088527c1197f91c20ee957cfaea3144226907335716 \
     --hash=sha256:80c08477c09e70db4f85c99d484f2bafa095772f1d29b3ccb253270f9041da9a
-    # via beanie
+    # via
+    #   -r ./requirements.txt
+    #   beanie
 multidict==6.0.4 \
     --hash=sha256:01a3a55bd90018c9c080fbb0b9f4891db37d148a0a18722b42f94694f8b6d4c9 \
     --hash=sha256:0b1a97283e0c85772d613878028fec909f003993e1007eafa715b24b377cb9b8 \

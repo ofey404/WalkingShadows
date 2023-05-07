@@ -1941,4 +1941,4 @@ manifest:
   pip_repository:
     name: pip
     use_pip_repository_aliases: true
-integrity: f6948bfe7f024f302f5f265af8c65070848e1703aba87b6b0056c390ef9f84c9
+integrity: 5ca64741e395df71a8787d4e64722dee4453b8bf8f321bc06277fe85fe201a93

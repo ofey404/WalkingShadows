@@ -1,12 +1,12 @@
 from functools import lru_cache
 
-from libs import uvicornx
+from libs import mongox, uvicornx
 from pydantic import BaseSettings
 
 
 class Settings(BaseSettings):
-    log_level: str = "info"
     uvicorn: uvicornx.Settings = uvicornx.Settings()
+    mongo: mongox.Settings = mongox.Settings()
 
 
 @lru_cache

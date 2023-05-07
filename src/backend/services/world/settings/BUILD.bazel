@@ -9,6 +9,7 @@ py_library(
     imports = ["../../.."],
     visibility = ["//src/backend:__subpackages__"],
     deps = [
+        "//src/backend/libs/mongox",
         "//src/backend/libs/uvicornx",
         "@pip//pydantic",
     ],

@@ -1,0 +1,29 @@
+load("@rules_python//python:defs.bzl", "py_library", "py_test")
+
+py_library(
+    name = "mongox",
+    srcs = [
+        "__init__.py",
+        "settings.py",
+    ],
+    imports = ["../.."],
+    visibility = ["//src/backend:__subpackages__"],
+    deps = [
+        "@pip//beanie",
+        "@pip//motor",
+        "@pip//pydantic",
+    ],
+)
+
+py_test(
+    name = "mongox_test",
+    srcs = ["__test__.py"],
+    imports = ["../.."],
+    main = "__test__.py",
+    deps = [
+        ":mongox",
+        "//src/backend/libs/testx",
+        "@pip//beanie",
+        "@pip//testcontainers",
+    ],
+)
