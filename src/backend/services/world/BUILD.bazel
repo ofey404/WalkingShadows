@@ -16,7 +16,10 @@ py_binary(
 
 py_library(
     name = "world",
-    srcs = ["internal/models/character.py"],
+    srcs = [
+        "internal/models/character.py",
+        "internal/models/world.py",
+    ],
     imports = ["../.."],
     visibility = ["//src/backend:__subpackages__"],
     deps = ["@pip//beanie"],
