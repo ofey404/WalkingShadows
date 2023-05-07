@@ -1,4 +1,3 @@
-from http.client import HTTPException
 from typing import Any, Dict, Union
 
 from pydantic import BaseModel
@@ -8,11 +7,11 @@ class HttpExceptionModel(BaseModel):
     detail: str
 
 
-def add_exception_to_openapi(*exceptions: HTTPException) -> Dict[int, Dict[str, Any]]:
+def add_to_openapi_doc(code_pair: Dict[int, str]) -> Dict[int, Dict[str, Any]]:
     return {
-        e.status_code: {
-            "description": e.detail,
+        code: {
+            "description": detail,
             "model": HttpExceptionModel,
         }
-        for e in exceptions
+        for code, detail in code_pair.items()
     }

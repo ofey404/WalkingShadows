@@ -12,7 +12,10 @@ class EventGetResponse(BaseModel):
     ...
 
 
-@router.post("/api/world/{world}/event/get", responses={})
+@router.post(
+    "/api/world/{world}/event/get",
+    responses={},
+)
 async def handle_event_get(
     world: str,
     body: EventGetRequest,
