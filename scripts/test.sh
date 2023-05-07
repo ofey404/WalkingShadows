@@ -8,3 +8,5 @@ PROJECT_ROOT="${SCRIPT_DIR}/.."
 cd "$PROJECT_ROOT"
 
 bazel test //src/backend/... "$@"
+
+exit $?
