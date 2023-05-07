@@ -28,6 +28,7 @@ services:
     restart: always
     environment:
       MONGODB_URL: mongodb://root:example@mongo:27017/
+      LOGURU_LEVEL: INFO
     ports:
       - "8000:8000"
     depends_on:

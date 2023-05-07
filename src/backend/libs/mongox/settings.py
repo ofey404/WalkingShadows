@@ -16,8 +16,9 @@ class Settings(BaseSettings):
 async def init(
     settings: Settings,
     document_models: Optional[List[Union[Type["DocType"], Type["View"], str]]] = None,
-):
+) -> AsyncIOMotorClient:
     client = AsyncIOMotorClient(settings.url)
     await init_beanie(
         database=client[settings.database_name], document_models=document_models
     )
+    return client

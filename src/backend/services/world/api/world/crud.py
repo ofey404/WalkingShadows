@@ -1,4 +1,3 @@
-from typing import Annotated
 from uuid import uuid4
 
 from fastapi import APIRouter, Depends, HTTPException, status
@@ -32,7 +31,8 @@ async def handle_create(
     body: WorldCreateRequest,
 ) -> dict:
     if not body.overwrite:
-        if World.find_one({"name": world_name}) is not None:
+        exists = await World.find_one({"name": world_name}).exists()
+        if exists:
             raise HTTPException(
                 status_code=status.HTTP_400_BAD_REQUEST,
                 detail=f"world {world_name} already exists",

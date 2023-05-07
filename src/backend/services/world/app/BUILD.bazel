@@ -13,5 +13,6 @@ py_library(
         "//src/backend/services/world/internal/models",
         "//src/backend/services/world/settings",
         "@pip//fastapi",
+        "@pip//loguru",
     ],
 )
