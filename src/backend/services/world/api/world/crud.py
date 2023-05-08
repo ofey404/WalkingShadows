@@ -38,13 +38,13 @@ async def handle_create(
                 detail=f"world {world_name} already exists",
             )
 
-    akasha_id = str(uuid4())
+    event_id = str(uuid4())
     world = World(
-        akasha_id=akasha_id,
+        event_id=event_id,
         name=world_name,
     )
     await world.insert()
 
     return WorldCreateResponse(
-        akasha_id=akasha_id,
+        akasha_id=event_id,
     ).dict()

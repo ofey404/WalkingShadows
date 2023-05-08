@@ -21,6 +21,12 @@ def get_sub_dependency(settings: Annotated[Settings, Depends(get_settings)]) -> 
     return settings.dict()
 
 
+def get_multiple_dependency(
+    body: TickRequest, settings: Annotated[Settings, Depends(get_settings)]
+):
+    return body, settings.dict()
+
+
 @router.post(
     "/api/world/{world}/tick",
     response_model=TickResponse,
@@ -35,10 +41,12 @@ async def handle_tick(
     body: TickRequest,
     settings: Annotated[Settings, Depends(get_settings)],
     sub_dependency: Annotated[dict, Depends(get_sub_dependency)],
+    multiple_dependency: Annotated[tuple, Depends(get_multiple_dependency)],
 ) -> dict:
     logger.info(f"world: {world}")
     logger.info(f"settings: {settings.dict()}")
     logger.info(f"sub_dependency: {sub_dependency}")
+    logger.info(f"multiple_dependency: {multiple_dependency}")
 
     if body.now != "now":
         raise HTTPException(

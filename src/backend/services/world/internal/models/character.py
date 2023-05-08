@@ -4,7 +4,7 @@ from beanie import Document
 
 
 class Character(Document):
-    akasha_id: str
+    event_id: str
     name: str
 
     memory: List[Dict[str, Any]] = []
