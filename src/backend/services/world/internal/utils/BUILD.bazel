@@ -1,0 +1,19 @@
+load("@rules_python//python:defs.bzl", "py_library")
+
+py_library(
+    name = "utils",
+    srcs = [
+        "__init__.py",
+        "case.py",
+    ],
+    imports = ["../../../.."],
+    visibility = ["//src/backend:__subpackages__"],
+    deps = [
+        "//src/backend/libs/mongox",
+        "//src/backend/libs/testx",
+        "//src/backend/services/world/api/world",
+        "//src/backend/services/world/app",
+        "//src/backend/services/world/settings",
+        "@pip//fastapi",
+    ],
+)
