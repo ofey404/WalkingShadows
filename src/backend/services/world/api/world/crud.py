@@ -1,3 +1,4 @@
+import random
 from uuid import uuid4
 
 from fastapi import APIRouter, Depends, HTTPException, status
@@ -14,7 +15,7 @@ class WorldCreateRequest(BaseModel):
 
 
 class WorldCreateResponse(BaseModel):
-    akasha_id: str
+    event_id: int
 
 
 @router.post(
@@ -38,13 +39,13 @@ async def handle_create(
                 detail=f"world {world_name} already exists",
             )
 
-    akasha_id = str(uuid4())
+    event_id = random.randint()
     world = World(
-        akasha_id=akasha_id,
+        event_id=event_id,
         name=world_name,
     )
     await world.insert()
 
     return WorldCreateResponse(
-        akasha_id=akasha_id,
+        event_id=event_id,
     ).dict()

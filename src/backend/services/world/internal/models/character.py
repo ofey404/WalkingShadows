@@ -4,9 +4,9 @@ from beanie import Document
 
 
 class Character(Document):
-    akasha_id: str
+    event_id: int
     name: str
 
+    fact: List[Dict[str, Any]] = []
     memory: List[Dict[str, Any]] = []
     property: Dict[str, Any] = {}
-    event: List[Dict[str, Any]] = []

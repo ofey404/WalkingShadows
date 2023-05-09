@@ -15,6 +15,7 @@ def create_app(
     async def lifespan(
         app: FastAPI,
     ):
+        # startup
         s = settings_override or get_settings()
         logger.info(f"connecting to db, with setting {s.json()}")
         client = await mongox.init(
@@ -25,6 +26,8 @@ def create_app(
             ],
         )
         yield
+
+        # shutdown
         logger.info(f"disconnect from db, with setting {s.json()}")
         client.close()
 
