@@ -4,6 +4,7 @@ py_library(
     name = "testx",
     srcs = [
         "__init__.py",
+        "const.py",
         "mongo_case.py",
     ],
     imports = ["../.."],

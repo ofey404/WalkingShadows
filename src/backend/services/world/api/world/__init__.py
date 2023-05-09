@@ -1,5 +1,5 @@
 from services.world.api.world.crud import router as crud_router
-from services.world.api.world.event import router as event_router
+from services.world.api.world.fact import router as event_router
 from services.world.api.world.memory import router as memory_router
 from services.world.api.world.tick import router as tick_router
 

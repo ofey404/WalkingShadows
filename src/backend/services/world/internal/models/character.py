@@ -1,10 +1,9 @@
 from typing import Any, Dict, List
 
-from beanie import Document
+from services.world.internal.models.event import Event
 
 
-class Character(Document):
-    event_id: int
+class Character(Event):
     name: str
 
     fact: List[Dict[str, Any]] = []
