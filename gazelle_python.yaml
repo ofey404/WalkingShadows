@@ -1289,6 +1289,48 @@ manifest:
     numpy.typing.mypy_plugin: numpy
     numpy.typing.setup: numpy
     numpy.version: numpy
+    openai: openai
+    openai.api_requestor: openai
+    openai.api_resources: openai
+    openai.api_resources.abstract: openai
+    openai.api_resources.abstract.api_resource: openai
+    openai.api_resources.abstract.createable_api_resource: openai
+    openai.api_resources.abstract.deletable_api_resource: openai
+    openai.api_resources.abstract.engine_api_resource: openai
+    openai.api_resources.abstract.listable_api_resource: openai
+    openai.api_resources.abstract.nested_resource_class_methods: openai
+    openai.api_resources.abstract.updateable_api_resource: openai
+    openai.api_resources.audio: openai
+    openai.api_resources.chat_completion: openai
+    openai.api_resources.completion: openai
+    openai.api_resources.customer: openai
+    openai.api_resources.deployment: openai
+    openai.api_resources.edit: openai
+    openai.api_resources.embedding: openai
+    openai.api_resources.engine: openai
+    openai.api_resources.error_object: openai
+    openai.api_resources.experimental: openai
+    openai.api_resources.experimental.completion_config: openai
+    openai.api_resources.file: openai
+    openai.api_resources.fine_tune: openai
+    openai.api_resources.image: openai
+    openai.api_resources.model: openai
+    openai.api_resources.moderation: openai
+    openai.cli: openai
+    openai.datalib: openai
+    openai.datalib.common: openai
+    openai.datalib.numpy_helper: openai
+    openai.datalib.pandas_helper: openai
+    openai.embeddings_utils: openai
+    openai.error: openai
+    openai.object_classes: openai
+    openai.openai_object: openai
+    openai.openai_response: openai
+    openai.upload_progress: openai
+    openai.util: openai
+    openai.validators: openai
+    openai.version: openai
+    openai.wandb_logger: openai
     openapi_schema_pydantic: openapi_schema_pydantic
     openapi_schema_pydantic.util: openapi_schema_pydantic
     openapi_schema_pydantic.v3: openapi_schema_pydantic
@@ -1472,6 +1514,70 @@ manifest:
     pytest: pytest
     pytest_asyncio: pytest_asyncio
     pytest_asyncio.plugin: pytest_asyncio
+    redis: redis
+    redis.asyncio: redis
+    redis.asyncio.client: redis
+    redis.asyncio.cluster: redis
+    redis.asyncio.connection: redis
+    redis.asyncio.lock: redis
+    redis.asyncio.parser: redis
+    redis.asyncio.retry: redis
+    redis.asyncio.sentinel: redis
+    redis.asyncio.utils: redis
+    redis.backoff: redis
+    redis.client: redis
+    redis.cluster: redis
+    redis.commands: redis
+    redis.commands.bf: redis
+    redis.commands.bf.commands: redis
+    redis.commands.bf.info: redis
+    redis.commands.cluster: redis
+    redis.commands.core: redis
+    redis.commands.graph: redis
+    redis.commands.graph.commands: redis
+    redis.commands.graph.edge: redis
+    redis.commands.graph.exceptions: redis
+    redis.commands.graph.execution_plan: redis
+    redis.commands.graph.node: redis
+    redis.commands.graph.path: redis
+    redis.commands.graph.query_result: redis
+    redis.commands.helpers: redis
+    redis.commands.json: redis
+    redis.commands.json.commands: redis
+    redis.commands.json.decoders: redis
+    redis.commands.json.path: redis
+    redis.commands.parser: redis
+    redis.commands.redismodules: redis
+    redis.commands.search: redis
+    redis.commands.search.aggregation: redis
+    redis.commands.search.commands: redis
+    redis.commands.search.document: redis
+    redis.commands.search.field: redis
+    redis.commands.search.indexDefinition: redis
+    redis.commands.search.query: redis
+    redis.commands.search.querystring: redis
+    redis.commands.search.reducers: redis
+    redis.commands.search.result: redis
+    redis.commands.search.suggestion: redis
+    redis.commands.sentinel: redis
+    redis.commands.timeseries: redis
+    redis.commands.timeseries.commands: redis
+    redis.commands.timeseries.info: redis
+    redis.commands.timeseries.utils: redis
+    redis.compat: redis
+    redis.connection: redis
+    redis.crc: redis
+    redis.credentials: redis
+    redis.exceptions: redis
+    redis.lock: redis
+    redis.ocsp: redis
+    redis.retry: redis
+    redis.sentinel: redis
+    redis.typing: redis
+    redis.utils: redis
+    regex: regex
+    regex.regex: regex
+    regex.test_regex: regex
     requests: requests
     requests.adapters: requests
     requests.api: requests
@@ -1813,6 +1919,12 @@ manifest:
     tests.v3_0_3.test_config_example: openapi_schema_pydantic
     tests.v3_0_3.test_util: openapi_schema_pydantic
     tests.v3_1_0: openapi_schema_pydantic
+    tiktoken: tiktoken
+    tiktoken.core: tiktoken
+    tiktoken.load: tiktoken
+    tiktoken.model: tiktoken
+    tiktoken.registry: tiktoken
+    tiktoken_ext.openai_public: tiktoken
     toml: toml
     toml.decoder: toml
     toml.encoder: toml
@@ -1941,4 +2053,4 @@ manifest:
   pip_repository:
     name: pip
     use_pip_repository_aliases: true
-integrity: 5ca64741e395df71a8787d4e64722dee4453b8bf8f321bc06277fe85fe201a93
+integrity: e9b496d40faa8222bd67a32493dcf44efc223a63e04794f8218edb888b0fb75a

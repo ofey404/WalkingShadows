@@ -39,7 +39,7 @@ async def handle_create(
                 detail=f"world {world_name} already exists",
             )
 
-    event_id = random.randint()
+    event_id = random.randint(0, 100)
     world = World(
         event_id=event_id,
         name=world_name,

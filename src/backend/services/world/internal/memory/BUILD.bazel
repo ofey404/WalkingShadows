@@ -8,4 +8,8 @@ py_library(
     ],
     imports = ["../../../.."],
     visibility = ["//src/backend:__subpackages__"],
+    deps = [
+        "@pip//langchain",
+        "@pip//pydantic",
+    ],
 )
