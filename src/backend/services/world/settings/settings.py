@@ -1,4 +1,4 @@
-from functools import lru_cache
+from functools import cache
 
 from libs import mongox, uvicornx
 from pydantic import BaseSettings
@@ -9,6 +9,6 @@ class Settings(BaseSettings):
     mongo: mongox.Settings = mongox.Settings()
 
 
-@lru_cache
+@cache
 def get_settings() -> Settings:
     return Settings()

@@ -1,14 +1,11 @@
 load("@rules_python//python:defs.bzl", "py_library")
 
 py_library(
-    name = "models",
+    name = "memory",
     srcs = [
         "__init__.py",
-        "character.py",
-        "event.py",
-        "world.py",
+        "memory_stream.py",
     ],
     imports = ["../../../.."],
     visibility = ["//src/backend:__subpackages__"],
-    deps = ["@pip//beanie"],
 )

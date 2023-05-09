@@ -5,11 +5,11 @@ from pydantic import BaseModel
 router = APIRouter()
 
 
-class EventGetRequest(BaseModel):
+class FactGetRequest(BaseModel):
     id: str
 
 
-class EventGetResponse(BaseModel):
+class FactGetResponse(BaseModel):
     id: str
     ts: int
     content: str
@@ -17,11 +17,11 @@ class EventGetResponse(BaseModel):
 
 @router.post(
     "/api/world/{world}/event/get",
-    response_model=EventGetResponse,
+    response_model=FactGetResponse,
 )
 async def handle_event_get(
     world: str,
-    body: EventGetRequest,
+    body: FactGetRequest,
 ) -> dict:
     logger.info(f"world: {world}")
 
