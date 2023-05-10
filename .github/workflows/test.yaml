@@ -16,6 +16,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Create .env file
+        id: create-dot-env
+        run: |
+          echo "OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}" > .env
+        shell: bash
+
       - name: Get Date
         id: get-date
         run: |
@@ -31,6 +37,14 @@ jobs:
           key: ${{ runner.os }}-bazel-cache-${{ steps.get-date.outputs.date }}
           restore-keys: |
             ${{ runner.os }}-bazel-cache-
+
+      - name: Docker Cache
+        uses: jpribyl/action-docker-layer-caching@v0.1.1
+        continue-on-error: true
+        with:
+          key: ${{ runner.os }}-docker-cache-{hash}
+          restore-keys: |
+            ${{ runner.os }}-docker-cache-
 
       - uses: bazelbuild/setup-bazelisk@v1
 

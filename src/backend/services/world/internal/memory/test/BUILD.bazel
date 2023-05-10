@@ -10,8 +10,11 @@ py_test(
     main = "__test__.py",
     deps = [
         "//src/backend/libs/testx",
+        "//src/backend/services/world/internal/memory",
         "@pip//langchain",
         "@pip//redis",
         "@pip//testcontainers",
+        "@pip//tiktoken",  # keep
+        "@pip//openai",  # keep
     ],
 )

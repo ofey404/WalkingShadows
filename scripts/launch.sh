@@ -9,6 +9,4 @@ cd "$PROJECT_ROOT"
 
 ./scripts/build_image.sh
 
-pushd src/deploy/local > /dev/null
-  docker-compose up -d
-popd > /dev/null
+docker-compose up -d
