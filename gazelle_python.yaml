@@ -398,6 +398,13 @@ manifest:
     docker.utils.socket: docker
     docker.utils.utils: docker
     docker.version: docker
+    dotenv: python_dotenv
+    dotenv.cli: python_dotenv
+    dotenv.ipython: python_dotenv
+    dotenv.main: python_dotenv
+    dotenv.parser: python_dotenv
+    dotenv.variables: python_dotenv
+    dotenv.version: python_dotenv
     exceptiongroup: exceptiongroup
     fastapi: fastapi
     fastapi.applications: fastapi
@@ -2053,4 +2060,4 @@ manifest:
   pip_repository:
     name: pip
     use_pip_repository_aliases: true
-integrity: e9b496d40faa8222bd67a32493dcf44efc223a63e04794f8218edb888b0fb75a
+integrity: 9c7c2671c8e36da8ae85f7402395cb844dc0584dad5926ad783176995c3aa935

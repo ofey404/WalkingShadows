@@ -7,4 +7,10 @@ PROJECT_ROOT="${SCRIPT_DIR}/.."
 
 cd "$PROJECT_ROOT"
 
-bazel test //src/backend/... "$@"
+if test -f .env; then
+  source .env
+fi
+
+bazel test //src/backend/... \
+           --test_env=OPENAI_API_KEY="${OPENAI_API_KEY}" \
+           "$@"

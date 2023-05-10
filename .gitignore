@@ -299,3 +299,5 @@ dist
 .pnp.*
 
 src/backend/static
+
+.env
