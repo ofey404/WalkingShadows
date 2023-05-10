@@ -27,6 +27,7 @@ services:
     image: ws-world:latest
     restart: always
     environment:
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
       MONGODB_URL: mongodb://root:example@mongo:27017/
       LOGURU_LEVEL: INFO
     ports:
