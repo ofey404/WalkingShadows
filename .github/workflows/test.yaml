@@ -38,6 +38,14 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-bazel-cache-
 
+      - name: Docker Cache
+        uses: jpribyl/action-docker-layer-caching@v0.1.1
+        continue-on-error: true
+        with:
+          key: ${{ runner.os }}-docker-cache-{hash}
+          restore-keys: |
+            ${{ runner.os }}-docker-cache-
+
       - uses: bazelbuild/setup-bazelisk@v1
 
       - name: Run All Tests
