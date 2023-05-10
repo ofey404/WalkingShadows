@@ -23,6 +23,15 @@ services:
     depends_on:
       - mongo
 
+  redis-stack:
+    image: redis/redis-stack:7.0.6-RC7
+    restart: always
+    ports:
+      - "6379:6379"
+      - "8001:8001"
+    volumes:
+      - /tmp/walkingshadows/data/redis:/data
+
   ws-world:
     image: ws-world:latest
     restart: always
@@ -34,3 +43,4 @@ services:
       - "8000:8000"
     depends_on:
       - mongo
+      - redis-stack
