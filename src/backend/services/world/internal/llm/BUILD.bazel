@@ -2,7 +2,16 @@ load("@rules_python//python:defs.bzl", "py_library")
 
 py_library(
     name = "llm",
-    srcs = ["__init__.py"],
+    srcs = [
+        "__init__.py",
+        "world_chain.py",
+    ],
     imports = ["../../../.."],
     visibility = ["//src/backend:__subpackages__"],
+    deps = [
+        "//src/backend/services/world/internal/models",
+        "//src/backend/services/world/settings",
+        "@pip//fastapi",
+        "@pip//langchain",
+    ],
 )

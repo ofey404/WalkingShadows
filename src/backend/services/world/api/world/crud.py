@@ -1,11 +1,10 @@
 import random
-from uuid import uuid4
 
 from fastapi import APIRouter, Depends, HTTPException, status
 from libs import errx
 from loguru import logger
 from pydantic import BaseModel
-from services.world.internal.models.world import World
+from services.world.internal.models.world import World, check_world_exist, get_world
 
 router = APIRouter()
 
@@ -31,14 +30,13 @@ class WorldCreateResponse(BaseModel):
 async def handle_create(
     world_name: str,
     body: WorldCreateRequest,
+    world_exists: bool = Depends(check_world_exist),
 ) -> dict:
-    if not body.overwrite:
-        exists = await World.find_one({"name": world_name}).exists()
-        if exists:
-            raise HTTPException(
-                status_code=status.HTTP_400_BAD_REQUEST,
-                detail=f"world {world_name} already exists",
-            )
+    if not body.overwrite and world_exists:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=f"world {world_name} already exists",
+        )
 
     event_id = random.randint(0, 100)
     world = World(
@@ -73,11 +71,6 @@ class WorldGetResponse(World):
 async def handle_get(
     world_name: str,
     body: WorldGetRequest,
+    world=Depends(get_world),
 ) -> dict:
-    world = await World.find({"name": world_name}).first_or_none()
-    if world is None:
-        raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            detail=f"world {world_name} not found",
-        )
     return world.dict()

@@ -1,9 +1,10 @@
 from services.world.api.world.crud import WorldCreateRequest, WorldGetRequest
+from services.world.api.world.memory import MemoryGenerateRequest
 from services.world.internal import utils
 
 
-class TestCrud(utils.WorldAppTestCase):
-    async def test_create(self):
+class TestWorld(utils.WorldAppTestCase):
+    async def test_world_lifecycle(self):
         world_name = "test_world_name"
         description = "test description"
 
@@ -28,3 +29,10 @@ class TestCrud(utils.WorldAppTestCase):
         )
         self.assertEqual(code, 200)
         self.assertEqual(body["description"], description)
+
+        code, body = self.postPydantic(
+            f"/api/world/{world_name}/memory/next",
+            MemoryGenerateRequest(),
+        )
+        self.assertEqual(code, 200)
+        print(f"body: {body}")

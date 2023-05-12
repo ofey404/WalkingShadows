@@ -12,6 +12,7 @@ py_library(
     visibility = ["//src/backend:__subpackages__"],
     deps = [
         "@pip//beanie",
+        "@pip//fastapi",
         "@pip//langchain",
     ],
 )

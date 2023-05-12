@@ -26,6 +26,7 @@ class WorldAppTestCase(TestCaseWithMongo):
 
         cls.app = create_app(
             world.crud_router,
+            world.memory_router,
             settings_override=s,
         )
         cls.app.dependency_overrides[get_settings] = lambda: s
