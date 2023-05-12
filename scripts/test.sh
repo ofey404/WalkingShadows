@@ -8,7 +8,7 @@ PROJECT_ROOT="${SCRIPT_DIR}/.."
 cd "$PROJECT_ROOT"
 
 if test -f .env; then
-  echo "Loading environment variables from .env"
+  echo "## Loading environment variables from .env"
   source .env
 fi
 

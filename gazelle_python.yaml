@@ -484,6 +484,8 @@ manifest:
     langchain.agents.agent_toolkits.csv.base: langchain
     langchain.agents.agent_toolkits.file_management: langchain
     langchain.agents.agent_toolkits.file_management.toolkit: langchain
+    langchain.agents.agent_toolkits.gmail: langchain
+    langchain.agents.agent_toolkits.gmail.toolkit: langchain
     langchain.agents.agent_toolkits.jira: langchain
     langchain.agents.agent_toolkits.jira.toolkit: langchain
     langchain.agents.agent_toolkits.json: langchain
@@ -758,8 +760,12 @@ manifest:
     langchain.document_loaders.notion: langchain
     langchain.document_loaders.notiondb: langchain
     langchain.document_loaders.obsidian: langchain
+    langchain.document_loaders.odt: langchain
     langchain.document_loaders.onedrive: langchain
     langchain.document_loaders.onedrive_file: langchain
+    langchain.document_loaders.parsers: langchain
+    langchain.document_loaders.parsers.generic: langchain
+    langchain.document_loaders.parsers.pdf: langchain
     langchain.document_loaders.pdf: langchain
     langchain.document_loaders.powerpoint: langchain
     langchain.document_loaders.python: langchain
@@ -784,6 +790,7 @@ manifest:
     langchain.document_loaders.url_selenium: langchain
     langchain.document_loaders.web_base: langchain
     langchain.document_loaders.whatsapp_chat: langchain
+    langchain.document_loaders.wikipedia: langchain
     langchain.document_loaders.word_document: langchain
     langchain.document_loaders.youtube: langchain
     langchain.document_transformers: langchain
@@ -830,6 +837,15 @@ manifest:
     langchain.experimental.generative_agents: langchain
     langchain.experimental.generative_agents.generative_agent: langchain
     langchain.experimental.generative_agents.memory: langchain
+    langchain.experimental.plan_and_execute: langchain
+    langchain.experimental.plan_and_execute.agent_executor: langchain
+    langchain.experimental.plan_and_execute.executors: langchain
+    langchain.experimental.plan_and_execute.executors.agent_executor: langchain
+    langchain.experimental.plan_and_execute.executors.base: langchain
+    langchain.experimental.plan_and_execute.planners: langchain
+    langchain.experimental.plan_and_execute.planners.base: langchain
+    langchain.experimental.plan_and_execute.planners.chat_planner: langchain
+    langchain.experimental.plan_and_execute.schema: langchain
     langchain.formatting: langchain
     langchain.graphs: langchain
     langchain.graphs.networkx_graph: langchain
@@ -858,6 +874,7 @@ manifest:
     langchain.llms.huggingface_endpoint: langchain
     langchain.llms.huggingface_hub: langchain
     langchain.llms.huggingface_pipeline: langchain
+    langchain.llms.human: langchain
     langchain.llms.llamacpp: langchain
     langchain.llms.loading: langchain
     langchain.llms.manifest: langchain
@@ -887,6 +904,7 @@ manifest:
     langchain.memory.chat_message_histories.file: langchain
     langchain.memory.chat_message_histories.firestore: langchain
     langchain.memory.chat_message_histories.in_memory: langchain
+    langchain.memory.chat_message_histories.mongodb: langchain
     langchain.memory.chat_message_histories.postgres: langchain
     langchain.memory.chat_message_histories.redis: langchain
     langchain.memory.chat_message_histories.sql: langchain
@@ -958,6 +976,7 @@ manifest:
     langchain.retrievers.time_weighted_retriever: langchain
     langchain.retrievers.vespa_retriever: langchain
     langchain.retrievers.weaviate_hybrid_search: langchain
+    langchain.retrievers.wikipedia: langchain
     langchain.schema: langchain
     langchain.serpapi: langchain
     langchain.server: langchain
@@ -980,6 +999,14 @@ manifest:
     langchain.tools.file_management.read: langchain
     langchain.tools.file_management.utils: langchain
     langchain.tools.file_management.write: langchain
+    langchain.tools.gmail: langchain
+    langchain.tools.gmail.base: langchain
+    langchain.tools.gmail.create_draft: langchain
+    langchain.tools.gmail.get_message: langchain
+    langchain.tools.gmail.get_thread: langchain
+    langchain.tools.gmail.search: langchain
+    langchain.tools.gmail.send_message: langchain
+    langchain.tools.gmail.utils: langchain
     langchain.tools.google_places: langchain
     langchain.tools.google_places.tool: langchain
     langchain.tools.google_search: langchain
@@ -1035,6 +1062,8 @@ manifest:
     langchain.tools.wikipedia.tool: langchain
     langchain.tools.wolfram_alpha: langchain
     langchain.tools.wolfram_alpha.tool: langchain
+    langchain.tools.youtube: langchain
+    langchain.tools.youtube.search: langchain
     langchain.tools.zapier: langchain
     langchain.tools.zapier.prompt: langchain
     langchain.tools.zapier.tool: langchain
@@ -2060,4 +2089,4 @@ manifest:
   pip_repository:
     name: pip
     use_pip_repository_aliases: true
-integrity: 9c7c2671c8e36da8ae85f7402395cb844dc0584dad5926ad783176995c3aa935
+integrity: a2d24d059dd0421dd2bb2e2437d99c4ef06b61e9a02dfd85e4321459b374ff09

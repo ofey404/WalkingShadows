@@ -1,20 +1,30 @@
-from services.world.api.world.crud import WorldCreateRequest
+from services.world.api.world.crud import WorldCreateRequest, WorldGetRequest
 from services.world.internal import utils
 
 
 class TestCrud(utils.WorldAppTestCase):
     async def test_create(self):
         world_name = "test_world_name"
-        resp = self.client.post(
+        description = "test description"
+
+        code, _ = self.postPydantic(
             f"/api/world/{world_name}/create",
-            json=WorldCreateRequest().dict(),
+            WorldCreateRequest(description=description),
         )
 
-        self.assertEqual(resp.status_code, 200)
+        self.assertEqual(code, 200)
 
         # post same again
-        resp = self.client.post(
+        code, _ = self.postPydantic(
             f"/api/world/{world_name}/create",
-            json=WorldCreateRequest().dict(),
+            WorldCreateRequest(description=description),
         )
-        self.assertEqual(resp.status_code, 400)
+        self.assertEqual(code, 400)
+
+        # get this world
+        code, body = self.postPydantic(
+            f"/api/world/{world_name}/get",
+            WorldGetRequest(),
+        )
+        self.assertEqual(code, 200)
+        self.assertEqual(body["description"], description)

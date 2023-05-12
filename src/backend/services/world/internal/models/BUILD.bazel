@@ -10,5 +10,8 @@ py_library(
     ],
     imports = ["../../../.."],
     visibility = ["//src/backend:__subpackages__"],
-    deps = ["@pip//beanie"],
+    deps = [
+        "@pip//beanie",
+        "@pip//langchain",
+    ],
 )

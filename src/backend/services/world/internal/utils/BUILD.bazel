@@ -15,5 +15,6 @@ py_library(
         "//src/backend/services/world/app",
         "//src/backend/services/world/settings",
         "@pip//fastapi",
+        "@pip//pydantic",
     ],
 )
