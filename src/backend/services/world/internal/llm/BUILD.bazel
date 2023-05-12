@@ -1,20 +1,17 @@
 load("@rules_python//python:defs.bzl", "py_library")
 
 py_library(
-    name = "utils",
+    name = "llm",
     srcs = [
         "__init__.py",
-        "case.py",
+        "world_chain.py",
     ],
     imports = ["../../../.."],
     visibility = ["//src/backend:__subpackages__"],
     deps = [
-        "//src/backend/libs/mongox",
-        "//src/backend/libs/testx",
-        "//src/backend/services/world/api/world",
-        "//src/backend/services/world/app",
+        "//src/backend/services/world/internal/models",
         "//src/backend/services/world/settings",
         "@pip//fastapi",
-        "@pip//pydantic",
+        "@pip//langchain",
     ],
 )

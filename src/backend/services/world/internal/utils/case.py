@@ -1,9 +1,12 @@
+import json
 import unittest
+from typing import Tuple
 
 import fastapi
 from fastapi.testclient import TestClient
 from libs import mongox
 from libs.testx import TestCaseWithMongo
+from pydantic import BaseModel
 from services.world.api import world
 from services.world.app import create_app
 from services.world.settings import Settings, get_settings
@@ -23,6 +26,7 @@ class WorldAppTestCase(TestCaseWithMongo):
 
         cls.app = create_app(
             world.crud_router,
+            world.memory_router,
             settings_override=s,
         )
         cls.app.dependency_overrides[get_settings] = lambda: s
@@ -33,3 +37,9 @@ class WorldAppTestCase(TestCaseWithMongo):
         with TestClient(self.app) as client:
             self.client: TestClient = client
             super().run(result)
+
+    def postPydantic(self, url, data: BaseModel) -> Tuple[int, dict]:
+        resp = self.client.post(url, json=data.dict())
+
+        data_dict = json.loads(resp.content)
+        return resp.status_code, data_dict

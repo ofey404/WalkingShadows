@@ -410,9 +410,9 @@ iniconfig==2.0.0 \
     --hash=sha256:2d91e135bf72d31a410b17c16da610a82cb55f6b0477d1a902134b24a455b8b3 \
     --hash=sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374
     # via pytest
-langchain==0.0.160 \
-    --hash=sha256:427c142e2fdb9f9ef9f2352a2c82db28db4d11c61f02b20dd33e77d850fe81cc \
-    --hash=sha256:e09310cc07c38a5e6777bd3d30c51227e2da775d4267d3fb72697a4de3931da3
+langchain[openai]==0.0.165 \
+    --hash=sha256:1cedcef1113fbfd8c394254571a1bf86821da6404ea92ea8bb58dc5272d5d81c \
+    --hash=sha256:cff6421823a4d1ad042654a70f02c4417b7bd68c55b380bd671a9376dfd05d4a
     # via -r ./requirements.txt
 lazy-model==0.0.5 \
     --hash=sha256:2d98f9dfe275012477555a439dceb56364793a0f266758d1a33267d68e8fbc76 \
@@ -587,7 +587,7 @@ numpy==1.24.2 \
 openai==0.27.6 \
     --hash=sha256:1f07ed06f1cfc6c25126107193726fe4cf476edcc4e1485cd9eb708f068f2606 \
     --hash=sha256:63ca9f6ac619daef8c1ddec6d987fe6aa1c87a9bfdce31ff253204d077222375
-    # via -r ./requirements.txt
+    # via langchain
 openapi-schema-pydantic==1.2.4 \
     --hash=sha256:3e22cf58b74a69f752cc7e5f1537f6e44164282db2700cbbcd3bb99ddd065196 \
     --hash=sha256:a932ecc5dcbb308950282088956e94dea069c9823c84e507d64f6b622222098c
@@ -788,7 +788,9 @@ pyyaml==6.0 \
 redis==4.5.5 \
     --hash=sha256:77929bc7f5dab9adf3acba2d3bb7d7658f1e0c2f1cafe7eb36434e751c471119 \
     --hash=sha256:dc87a0bdef6c8bfe1ef1e1c40be7034390c2ae02d92dcd0c7ca1729443899880
-    # via -r ./requirements.txt
+    # via
+    #   -r ./requirements.txt
+    #   testcontainers
 regex==2023.5.5 \
     --hash=sha256:02f4541550459c08fdd6f97aa4e24c6f1932eec780d58a2faa2068253df7d6ff \
     --hash=sha256:0a69cf0c00c4d4a929c6c7717fd918414cab0d6132a49a6d8fc3ded1988ed2ea \
@@ -945,7 +947,7 @@ tenacity==8.2.2 \
     --hash=sha256:2f277afb21b851637e8f52e6a613ff08734c347dc19ade928e519d7d2d8569b0 \
     --hash=sha256:43af037822bd0029025877f3b2d97cc4d7bb0c2991000a3d59d71517c5c969e0
     # via langchain
-testcontainers==3.7.1 \
+testcontainers[redis]==3.7.1 \
     --hash=sha256:7f48cef4bf0ccd78f1a4534d4b701a003a3bace851f24eae58a32f9e3f0aeba0
     # via -r ./requirements.txt
 tiktoken==0.4.0 \

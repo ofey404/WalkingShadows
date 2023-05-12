@@ -15,6 +15,5 @@ py_test(
         "@pip//redis",
         "@pip//testcontainers",
         "@pip//tiktoken",  # keep
-        "@pip//openai",  # keep
     ],
 )

@@ -4,8 +4,8 @@ py_test(
     name = "test_test",
     srcs = [
         "__test__.py",
-        "test_crud.py",
         "test_tick.py",
+        "test_world.py",
     ],
     imports = ["../../../../.."],
     main = "__test__.py",

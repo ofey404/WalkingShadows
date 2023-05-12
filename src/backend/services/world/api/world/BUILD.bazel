@@ -13,6 +13,7 @@ py_library(
     visibility = ["//src/backend:__subpackages__"],
     deps = [
         "//src/backend/libs/errx",
+        "//src/backend/services/world/internal/llm",
         "//src/backend/services/world/internal/models",
         "//src/backend/services/world/settings",
         "@pip//fastapi",
