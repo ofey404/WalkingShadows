@@ -42,8 +42,21 @@ class TestWorld(utils.WorldAppTestCase):
         self.assertEqual(code, 200)
         self.assertEqual(body["description"], description)
 
+        # generate content
         code, body = self.postPydantic(
             f"/api/world/{world_name}/memory/generate",
             MemoryGenerateRequest(),
         )
         self.assertEqual(code, 200)
+        generated_content = body["generated_memory"]
+
+        # get world again
+        code, body = self.postPydantic(
+            f"/api/world/{world_name}/get",
+            WorldGetRequest(),
+        )
+        self.assertEqual(code, 200)
+        self.assertEqual(
+            body["memory"][0]["page_content"],
+            generated_content,
+        )
