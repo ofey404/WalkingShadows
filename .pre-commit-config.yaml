@@ -26,12 +26,6 @@ repos:
 
   - repo: local
     hooks:
-      - id: update-bazel-build
-        name: update bazel build
-        entry: ./scripts/update_bazel_build.sh
-        files: 'src/backend/.*\.py$'
-        language: system
-
       - id: run-all-tests
         name: run all tests
         entry: ./scripts/test.sh --test_tag_filters=+service

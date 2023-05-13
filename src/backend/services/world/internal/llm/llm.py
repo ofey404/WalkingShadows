@@ -32,6 +32,7 @@ class MockOpenAI(OpenAI):
             json_str = json.dumps(
                 [r.dict() for r in self.records],
                 ensure_ascii=False,
+                indent=4,
             )
             with open(self.to_file, "w") as f:
                 f.write(json_str)
