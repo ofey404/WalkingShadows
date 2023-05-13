@@ -1,9 +1,11 @@
 from typing import Callable
 
 from fastapi import APIRouter, Depends
+from langchain import schema
 from loguru import logger
 from pydantic import BaseModel
 from services.world.internal.llm import generate_world_memory
+from services.world.internal.models.world import World, get_world
 
 router = APIRouter()
 
@@ -40,15 +42,23 @@ class MemoryGenerateResponse(BaseModel):
 
 
 @router.post(
-    "/api/world/{world_name}/memory/next",
+    "/api/world/{world_name}/memory/generate",
     response_model=MemoryGenerateResponse,
 )
 async def handle_memory_generate(
     world_name: str,
     body: MemoryGenerateRequest,
+    world: World = Depends(get_world),
     generated_memory: str = Depends(generate_world_memory),
 ) -> dict:
     """generate new memory entry"""
+
+    world.memory.append(
+        schema.Document(
+            page_content=generated_memory,
+        )
+    )
+    await world.replace()
 
     return MemoryGenerateResponse(
         generated_memory=generated_memory,

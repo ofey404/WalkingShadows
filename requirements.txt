@@ -1,4 +1,4 @@
-langchain[openai]==0.0.165
+langchain[openai]==0.0.167
 pydantic==1.10.7
 python-dotenv==1.0.0
 pydantic_yaml==0.11.2
@@ -12,4 +12,3 @@ beanie==1.19.0
 testcontainers[redis]==3.7.1
 motor==3.1.2
 redis==4.5.5
-tiktoken==0.4.0

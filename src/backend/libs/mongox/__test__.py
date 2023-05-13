@@ -21,12 +21,25 @@ class TestMongo(unittest.IsolatedAsyncioTestCase):
             )
             d = TestDocument(content="test")
             await d.insert()
+
+            # test update
             d2 = await TestDocument.find_one({"content": "test"})
             self.assertIsNotNone(d2)
             self.assertEqual(d2.content, "test")
 
-            d3 = await TestDocument.find_one({"content": "not exist"})
-            self.assertIsNone(d3)
+            d2_id = d2.id
+            modified_content = "test update"
+            d2.content = modified_content
+            await d2.replace()
+
+            # check updated content
+            d3 = await TestDocument.get(d2_id)
+            self.assertIsNotNone(d3)
+            self.assertEqual(d3.content, modified_content)
+
+            # document not exist
+            d4 = await TestDocument.find_one({"content": "not exist"})
+            self.assertIsNone(d4)
 
 
 if __name__ == "__main__":

@@ -6,7 +6,7 @@ from langchain.schema import Document
 from langchain.vectorstores.redis import Redis
 from libs.testx import REDIS_CONTAINER_VERSION
 from redis import Redis as RedisClient
-from services.world.internal.memory.memory_stream import MemoryStream
+from services.world.internal.memory.memory_stream import MemoryStreamRetriver
 from testcontainers.redis import RedisContainer
 
 
@@ -59,7 +59,7 @@ class TestMemoryStream(unittest.TestCase):
         # Create the search index
         self.vectorstore._create_index(dim=len(embeddings[0]))
 
-        self.ms = MemoryStream(
+        self.ms = MemoryStreamRetriver(
             get_timestamp=lambda: self.ts,
             vectorstore=self.vectorstore,
         )

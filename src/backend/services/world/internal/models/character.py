@@ -7,6 +7,6 @@ from services.world.internal.models.event import Event
 class Character(Event):
     name: str
 
-    fact: List[Dict[str, schema.Document]] = []
-    memory: List[Dict[str, schema.Document]] = []
+    fact: List[schema.Document] = []
+    memory: List[schema.Document] = []
     property: Dict[str, Any] = {}

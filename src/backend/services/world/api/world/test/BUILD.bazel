@@ -7,11 +7,16 @@ py_test(
         "test_tick.py",
         "test_world.py",
     ],
+    data = glob(["**/*.json"]),
     imports = ["../../../../.."],
     main = "__test__.py",
+    tags = [
+        "service",
+    ],
     deps = [
         "//src/backend/services/world/api/world",
         "//src/backend/services/world/app",
+        "//src/backend/services/world/internal/llm",
         "//src/backend/services/world/internal/utils",
         "@pip//httpx",
     ],
