@@ -1,0 +1,23 @@
+[
+  {
+    "generations": [
+      [
+        {
+          "text": "\n一群冒险者正在寻找一个传说中的宝藏，不料却被一个古老的史莱姆洞穴里的魔法生物所阻挠。",
+          "generation_info": {
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        }
+      ]
+    ],
+    "llm_output": {
+      "token_usage": {
+        "completion_tokens": 83,
+        "prompt_tokens": 82,
+        "total_tokens": 165
+      },
+      "model_name": "text-davinci-003"
+    }
+  }
+]

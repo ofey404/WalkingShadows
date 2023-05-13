@@ -2,13 +2,13 @@ from textwrap import dedent
 
 from fastapi import Depends
 from langchain import LLMChain, OpenAI, PromptTemplate
+from services.world.internal.llm import get_llm
 from services.world.internal.models.world import World, get_world
-from services.world.settings import Settings, get_settings
 
 
 def generate_world_memory(
     world: World = Depends(get_world),
-    settings: Settings = Depends(get_settings),
+    llm: OpenAI = Depends(get_llm),
 ) -> str:
     prompt = PromptTemplate(
         input_variables=["world_name", "description"],
@@ -23,7 +23,6 @@ def generate_world_memory(
         """
         ),
     )
-    llm = OpenAI(temperature=settings.openai.temperature)
     chain = LLMChain(llm=llm, prompt=prompt)
     return chain.run(
         world_name=world.name,

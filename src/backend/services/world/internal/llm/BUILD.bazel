@@ -4,6 +4,7 @@ py_library(
     name = "llm",
     srcs = [
         "__init__.py",
+        "llm.py",
         "world_chain.py",
     ],
     imports = ["../../../.."],
