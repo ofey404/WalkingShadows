@@ -31,7 +31,7 @@ class TestWorld(utils.WorldAppTestCase):
         self.assertEqual(body["description"], description)
 
         code, body = self.postPydantic(
-            f"/api/world/{world_name}/memory/next",
+            f"/api/world/{world_name}/memory/generate",
             MemoryGenerateRequest(),
         )
         self.assertEqual(code, 200)

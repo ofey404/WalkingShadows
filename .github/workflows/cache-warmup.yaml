@@ -1,6 +1,7 @@
 name: Warm up cache - daily run
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: "0 16 * * *" # Every day at 12 AM GMT+8 (UTC 4 PM)
 
@@ -10,8 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - name: Checkout
+      - name: Checkout main
         uses: actions/checkout@v3
+        with:
+          ref: main
 
       - name: Create .env file
         id: create-dot-env

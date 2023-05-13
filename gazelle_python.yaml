@@ -574,6 +574,7 @@ manifest:
     langchain.callbacks.clearml_callback: langchain
     langchain.callbacks.comet_ml_callback: langchain
     langchain.callbacks.manager: langchain
+    langchain.callbacks.mlflow_callback: langchain
     langchain.callbacks.openai_info: langchain
     langchain.callbacks.stdout: langchain
     langchain.callbacks.streaming_aiter: langchain
@@ -701,7 +702,6 @@ manifest:
     langchain.client: langchain
     langchain.client.langchain: langchain
     langchain.client.models: langchain
-    langchain.client.utils: langchain
     langchain.docstore: langchain
     langchain.docstore.arbitrary_fn: langchain
     langchain.docstore.base: langchain
@@ -861,6 +861,7 @@ manifest:
     langchain.llms.ai21: langchain
     langchain.llms.aleph_alpha: langchain
     langchain.llms.anthropic: langchain
+    langchain.llms.anyscale: langchain
     langchain.llms.bananadev: langchain
     langchain.llms.base: langchain
     langchain.llms.cerebriumai: langchain
@@ -874,6 +875,7 @@ manifest:
     langchain.llms.huggingface_endpoint: langchain
     langchain.llms.huggingface_hub: langchain
     langchain.llms.huggingface_pipeline: langchain
+    langchain.llms.huggingface_text_gen_inference: langchain
     langchain.llms.human: langchain
     langchain.llms.llamacpp: langchain
     langchain.llms.loading: langchain
@@ -950,6 +952,8 @@ manifest:
     langchain.python: langchain
     langchain.requests: langchain
     langchain.retrievers: langchain
+    langchain.retrievers.arxiv: langchain
+    langchain.retrievers.azure_cognitive_search: langchain
     langchain.retrievers.chatgpt_plugin_retriever: langchain
     langchain.retrievers.contextual_compression: langchain
     langchain.retrievers.databerry: langchain
@@ -1097,6 +1101,10 @@ manifest:
     langchain.vectorstores.base: langchain
     langchain.vectorstores.chroma: langchain
     langchain.vectorstores.deeplake: langchain
+    langchain.vectorstores.docarray: langchain
+    langchain.vectorstores.docarray.base: langchain
+    langchain.vectorstores.docarray.hnsw: langchain
+    langchain.vectorstores.docarray.in_memory: langchain
     langchain.vectorstores.elastic_vector_search: langchain
     langchain.vectorstores.faiss: langchain
     langchain.vectorstores.lancedb: langchain
@@ -2089,4 +2097,4 @@ manifest:
   pip_repository:
     name: pip
     use_pip_repository_aliases: true
-integrity: a2d24d059dd0421dd2bb2e2437d99c4ef06b61e9a02dfd85e4321459b374ff09
+integrity: 527eae9385093ee40a5a178d9874a9bd22fa318c2f4c99dd10849c8f7ef6a750
