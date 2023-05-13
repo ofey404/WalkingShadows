@@ -50,4 +50,4 @@ jobs:
 
       - name: Run All Tests
         run: |
-          ./scripts/test.sh
+          ./scripts/test.sh --test_tag_filters=+service

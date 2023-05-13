@@ -12,7 +12,7 @@ def _get_hours_passed(time: datetime, ref_time: datetime) -> float:
     return (time - ref_time).total_seconds() / 3600
 
 
-class MemoryStream(BaseRetriever, BaseModel):
+class MemoryStreamRetriver(BaseRetriever, BaseModel):
     """based on langchain's TimeWeightedVectorStoreRetriever,
     Retriever combining embedding similarity with recency.
     """

@@ -9,6 +9,9 @@ py_test(
     ],
     imports = ["../../../../.."],
     main = "__test__.py",
+    tags = [
+        "service",
+    ],
     deps = [
         "//src/backend/services/world/api/world",
         "//src/backend/services/world/app",
