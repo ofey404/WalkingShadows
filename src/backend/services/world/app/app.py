@@ -1,6 +1,8 @@
 from contextlib import asynccontextmanager
 
 from fastapi import APIRouter, Depends, FastAPI
+from fastapi.middleware import Middleware
+from fastapi.middleware.cors import CORSMiddleware
 from libs import mongox
 from loguru import logger
 from services.world.internal import models
@@ -31,8 +33,19 @@ def create_app(
         logger.info(f"disconnect from db, with setting {s.json()}")
         client.close()
 
-    app = FastAPI(lifespan=lifespan)
+    app = FastAPI(
+        lifespan=lifespan,
+        middleware=[
+            Middleware(
+                CORSMiddleware,
+                allow_origins=["*"],
+                allow_methods=["*"],
+                allow_headers=["*"],
+            )
+        ],
+    )
 
     for r in routers:
         app.include_router(r)
+
     return app

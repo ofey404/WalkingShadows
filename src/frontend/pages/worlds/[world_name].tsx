@@ -7,19 +7,22 @@ import utilStyles from "../../styles/utils.module.css";
 import Date from "../../components/date";
 import { useRouter } from "next/router";
 
-export default function World({
-  worldData,
-}: {
-  worldData: {
-    title: string;
-    date: string;
-    contentHtml: string;
-  };
-}) {
+export default function World() {
   const router = useRouter();
   const callAPI = async () => {
     try {
-      const res = await fetch(`https://jsonplaceholder.typicode.com/posts/1`);
+      const url =
+        process.env.NEXT_PUBLIC_BACKEND_API +
+        "/world/" +
+        router.query.world_name +
+        "/get";
+      const res = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({}),
+      });
       const data = await res.json();
       console.log(data);
       console.log(process.env.NEXT_PUBLIC_BACKEND_API);
@@ -32,41 +35,11 @@ export default function World({
   return (
     <Layout>
       <Head>
-        <title>{worldData.title}</title>
+        <title>Test Title</title>
       </Head>
       <article>
-        <h1 className={utilStyles.headingXl}>{worldData.title}</h1>
-        <div className={utilStyles.lightText}>
-          <Date dateString={worldData.date} />
-        </div>
         <button onClick={callAPI}>Make API call</button>
-        <div dangerouslySetInnerHTML={{ __html: worldData.contentHtml }} />
       </article>
     </Layout>
   );
 }
-
-export const getStaticPaths: GetStaticPaths = async () => {
-  const ids = getAllPostIds();
-  // rename id to world_name
-  const paths = ids.map((p) => {
-    return {
-      params: {
-        world_name: p.params.id,
-      },
-    };
-  });
-  return {
-    paths,
-    fallback: false,
-  };
-};
-
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const worldData = await getPostData(params?.world_name as string);
-  return {
-    props: {
-      worldData,
-    },
-  };
-};

@@ -24,7 +24,7 @@ async def get_world(world_name: str) -> World:
     if world is None:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
-            detail=f"world {world} not found",
+            detail=f"world {world_name} not found",
         )
     return world
 
