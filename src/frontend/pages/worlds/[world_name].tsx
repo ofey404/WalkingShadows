@@ -5,6 +5,7 @@ import Head from "next/head";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import utilStyles from "../../styles/utils.module.css";
 import Date from "../../components/date";
+import { useRouter } from "next/router";
 
 export default function World({
   worldData,
@@ -15,12 +16,14 @@ export default function World({
     contentHtml: string;
   };
 }) {
+  const router = useRouter();
   const callAPI = async () => {
     try {
       const res = await fetch(`https://jsonplaceholder.typicode.com/posts/1`);
       const data = await res.json();
       console.log(data);
       console.log(process.env.NEXT_PUBLIC_BACKEND_API);
+      console.log(router.query.world_name);
     } catch (err) {
       console.log(err);
     }
