@@ -1,5 +1,6 @@
 load("@rules_python//python:defs.bzl", "py_binary")
 load("@io_bazel_rules_docker//python3:image.bzl", "py3_image")
+load("@io_bazel_rules_docker//python:image.bzl", "py_layer")
 
 py_binary(
     name = "world_bin",
@@ -15,16 +16,28 @@ py_binary(
     ],
 )
 
+
+LIBS = [
+    "//src/backend/libs/uvicornx",
+    "//src/backend/services/world/app",
+    "//src/backend/services/world/api/world",
+    "//src/backend/services/world/settings",
+]
+
+py_layer(
+    name = "external_deps",
+    deps = LIBS,
+    filter = "@",
+)
+
 py3_image(
     name = "image",
     srcs = ["__main__.py"],
     imports = ["../.."],
     main = "__main__.py",
     visibility = ["//src/backend:__subpackages__"],
-    deps = [
-        "//src/backend/libs/uvicornx",
-        "//src/backend/services/world/api/world",
-        "//src/backend/services/world/app",
-        "//src/backend/services/world/settings",
-    ],
+    deps = LIBS,
+    layers = [
+        ":external_deps",
+    ]
 )
