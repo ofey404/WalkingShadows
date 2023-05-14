@@ -1,9 +1,22 @@
 from fastapi import HTTPException, status
+from langchain import schema
 from services.world.internal.models.character import Character
 
 
 class World(Character):
-    ...
+    timestamp: int = 0
+
+    def add_memory(self, text: str) -> None:
+        self.memory.append(
+            schema.Document(
+                page_content=text,
+                metadata={
+                    "created_at": self.timestamp,
+                    "last_accessed_at": self.timestamp,
+                    "buffer_idx": len(self.memory),
+                },
+            )
+        )
 
 
 async def get_world(world_name: str) -> World:

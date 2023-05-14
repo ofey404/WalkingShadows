@@ -53,11 +53,7 @@ async def handle_memory_generate(
 ) -> dict:
     """generate new memory entry"""
 
-    world.memory.append(
-        schema.Document(
-            page_content=generated_memory,
-        )
-    )
+    world.add_memory(generated_memory)
     await world.replace()
 
     return MemoryGenerateResponse(
