@@ -7,3 +7,5 @@ py_library(
     srcs = ["__init__.py"],
     visibility = ["//src/backend:__subpackages__"],
 )
+
+exports_files([".gitignore"])
