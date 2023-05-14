@@ -13,5 +13,10 @@
     "react-dom": "18.2.0",
     "remark": "^14.0.2",
     "remark-html": "^15.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "20.1.4",
+    "@types/react": "18.2.6",
+    "typescript": "5.0.4"
   }
 }
