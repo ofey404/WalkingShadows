@@ -15,6 +15,17 @@ export default function World({
     contentHtml: string;
   };
 }) {
+  const callAPI = async () => {
+    try {
+      const res = await fetch(`https://jsonplaceholder.typicode.com/posts/1`);
+      const data = await res.json();
+      console.log(data);
+      console.log(process.env.NEXT_PUBLIC_BACKEND_API);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
     <Layout>
       <Head>
@@ -25,6 +36,7 @@ export default function World({
         <div className={utilStyles.lightText}>
           <Date dateString={worldData.date} />
         </div>
+        <button onClick={callAPI}>Make API call</button>
         <div dangerouslySetInnerHTML={{ __html: worldData.contentHtml }} />
       </article>
     </Layout>
