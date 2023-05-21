@@ -16,7 +16,6 @@ py_binary(
     ],
 )
 
-
 LIBS = [
     "//src/backend/libs/uvicornx",
     "//src/backend/services/world/app",
@@ -26,18 +25,18 @@ LIBS = [
 
 py_layer(
     name = "external_deps",
-    deps = LIBS,
     filter = "@",
+    deps = LIBS,
 )
 
 py3_image(
     name = "image",
     srcs = ["__main__.py"],
     imports = ["../.."],
+    layers = [
+        ":external_deps",
+    ],
     main = "__main__.py",
     visibility = ["//src/backend:__subpackages__"],
     deps = LIBS,
-    layers = [
-        ":external_deps",
-    ]
 )
