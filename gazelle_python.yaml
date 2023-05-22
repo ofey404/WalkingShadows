@@ -1294,7 +1294,6 @@ manifest:
     numpy.lib.ufunclike: numpy
     numpy.lib.user_array: numpy
     numpy.lib.utils: numpy
-    numpy.libs.libopenblas64_p-r0-15028c96: numpy
     numpy.linalg: numpy
     numpy.linalg.lapack_lite: numpy
     numpy.linalg.linalg: numpy
@@ -2097,4 +2096,4 @@ manifest:
   pip_repository:
     name: pip
     use_pip_repository_aliases: true
-integrity: 527eae9385093ee40a5a178d9874a9bd22fa318c2f4c99dd10849c8f7ef6a750
+integrity: 374198df652cf117b0ddcba66b7645bd38d1b7def06c28967c2530af1a0194f9
