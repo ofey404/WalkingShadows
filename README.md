@@ -1,7 +1,14 @@
 # Walking Shadows
 
-This repository reproduces Stanford's article:
-[Generative Agents: Interactive Simulacra of Human Behavior](https://arxiv.org/abs/2304.03442)
+In this repo, I'm building a web tool for quickly building story prototypes with LLM.
+
+Based on:
+
+1. ML Storytelling researches
+2. Stanford's article:
+   [Generative Agents: Interactive Simulacra of Human Behavior](https://arxiv.org/abs/2304.03442)
+
+For the name, see:
 
 > Life's but a walking shadow; a poor player,
 > that struts and frets his hour upon the stage,
@@ -9,11 +16,12 @@ This repository reproduces Stanford's article:
 > it is a tale told by an idiot, full of sound and fury,
 > signifying nothing.
 
-## Goal & Roadmap
+## Roadmap
 
 Goal:
 
-1. Reproduce the article.
+1. Build a writing-aid tool with verified technologies,
+   like stanford's generative agents, and other ML story telling papers.
 2. Write it in business quality, battle-tested python.
 
 For roadmap, see [./docs/roadmap.md](./docs/roadmap.md).
@@ -43,6 +51,8 @@ Commands:
 ```bash
 ./scripts/update_bazel_build.sh
 ./scripts/build_image.sh
-./scripts/run.sh
+./scripts/launch.sh
+./scripts/start_frontend.sh
+./scripts/start_backend.sh
 ./scripts/test.sh
 ```
