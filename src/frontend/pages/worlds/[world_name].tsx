@@ -1,13 +1,9 @@
-import { GetStaticPaths, GetStaticProps } from "next";
-import { getWorldData } from "../../lib/worlds";
-import Layout from "../../components/layout";
+import React, { type ReactElement } from "react";
 import Head from "next/head";
-import { getAllPostIds, getPostData } from "../../lib/posts";
-import utilStyles from "../../styles/utils.module.css";
-import Date from "../../components/date";
 import { useRouter } from "next/router";
+import Layout from "../../components/layout";
 
-export default function World() {
+export default function World(): ReactElement {
   const router = useRouter();
   const callAPI = async () => {
     try {

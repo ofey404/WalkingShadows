@@ -1,0 +1,21 @@
+load("@aspect_rules_ts//ts:defs.bzl", "ts_project")
+
+SRCS = glob([
+    "**/*.tsx",
+    "**/*.ts",
+])
+
+ts_project(
+    name = "worlds",
+    srcs = SRCS,
+    declaration = True,
+    resolve_json_module = True,
+    tsconfig = "//src/frontend:tsconfig",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//src/frontend:node_modules/next",
+        "//src/frontend/components",
+        "//src/frontend/lib",
+        "//src/frontend:node_modules/@types/react",
+    ],
+)

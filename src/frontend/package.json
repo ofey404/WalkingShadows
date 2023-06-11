@@ -1,9 +1,9 @@
 {
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "dev": "ibazel run //src/frontend:next_dev",
+    "build": "bazel build //src/frontend:next",
+    "start": "ibazel run //src/frontend:next_start"
   },
   "dependencies": {
     "date-fns": "^2.29.3",
@@ -17,6 +17,14 @@
   "devDependencies": {
     "@types/node": "20.1.4",
     "@types/react": "18.2.6",
-    "typescript": "5.0.4"
+    "@typescript-eslint/eslint-plugin": "^5.50.0",
+    "eslint": "^8.0.1",
+    "eslint-config-standard-with-typescript": "^35.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.32.2",
+    "typescript": "5.0.4",
+    "typescript-plugin-css-modules": "^5.0.1"
   }
 }
