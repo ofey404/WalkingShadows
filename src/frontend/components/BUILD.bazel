@@ -8,10 +8,7 @@ SRCS = glob([
 ts_project(
     name = "components",
     srcs = SRCS,
-    allow_js = True,
     declaration = True,
-    incremental = True,
-    preserve_jsx = True,
     resolve_json_module = True,
     tsconfig = "//src/frontend:tsconfig",
     visibility = ["//visibility:public"],

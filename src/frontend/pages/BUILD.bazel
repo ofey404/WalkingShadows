@@ -8,14 +8,14 @@ SRCS = glob([
 ts_project(
     name = "pages",
     srcs = SRCS,
-    allow_js = True,
     declaration = True,
-    incremental = True,
-    preserve_jsx = True,
     resolve_json_module = True,
     tsconfig = "//src/frontend:tsconfig",
     visibility = ["//visibility:public"],
     deps = [
+        # "//src/frontend/pages/api",
+        # "//src/frontend/pages/posts",
+        # "//src/frontend/pages/worlds",
         "//src/frontend/components",
         "//src/frontend/lib",
         # node_modules
