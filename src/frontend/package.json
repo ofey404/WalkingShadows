@@ -1,9 +1,9 @@
 {
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "dev": "ibazel run //src/frontend:next_dev",
+    "build": "bazel build //src/frontend:next",
+    "start": "ibazel run //src/frontend:next_start"
   },
   "dependencies": {
     "date-fns": "^2.29.3",
