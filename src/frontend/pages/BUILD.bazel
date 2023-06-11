@@ -17,6 +17,7 @@ ts_project(
     visibility = ["//visibility:public"],
     deps = [
         "//src/frontend/components",
+        "//src/frontend/lib",
         # node_modules
         "//src/frontend:node_modules/date-fns",
         "//src/frontend:node_modules/gray-matter",

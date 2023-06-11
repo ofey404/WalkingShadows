@@ -33,7 +33,7 @@ next(
         ":node_modules/remark-html",
         ":node_modules/@types/node",
         ":node_modules/@types/react", ],
-    next_bin = "/node_modules/.bin/next",
+    next_bin = "node_modules/.bin/next",
     next_js_binary = "//src/frontend:next_js_binary",
 )
 

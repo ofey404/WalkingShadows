@@ -13,7 +13,6 @@ export function getSortedPostsData() {
     return fileName.endsWith(".md");
   });
 
-  console.log("My fileNames: ", fileNames);
   const allPostsData = fileNames.map((fileName) => {
     // Remove ".md" from file name to get id
     const id = fileName.replace(/\.md$/, "");
