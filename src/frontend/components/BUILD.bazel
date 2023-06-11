@@ -16,14 +16,8 @@ ts_project(
     tsconfig = "//src/frontend:tsconfig",
     visibility = ["//visibility:public"],
     deps = [
-        "//src/frontend:node_modules/@types/react",
         "//src/frontend:node_modules/date-fns",
-        "//src/frontend:node_modules/gray-matter",
+        "//src/frontend:node_modules/@types/react",
         "//src/frontend:node_modules/next",
-        "//src/frontend:node_modules/react",
-        "//src/frontend:node_modules/react-dom",
-        "//src/frontend:node_modules/remark",
-        "//src/frontend:node_modules/remark-html",
-        "//src/frontend:node_modules/typescript",
     ],
 )
