@@ -13,6 +13,7 @@ ts_project(
     tsconfig = "//src/frontend:tsconfig",
     visibility = ["//visibility:public"],
     deps = [
+        "//src/frontend/styles",
         "//src/frontend:node_modules/date-fns",
         "//src/frontend:node_modules/@types/react",
         "//src/frontend:node_modules/next",
