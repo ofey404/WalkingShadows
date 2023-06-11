@@ -1,0 +1,44 @@
+load("@npm//:defs.bzl", "npm_link_all_packages")
+load("@npm//src/frontend:next/package_json.bzl", next_bin = "bin")
+load("@aspect_rules_ts//ts:defs.bzl", "ts_config")
+load("//:bazel/next.bzl", "next")
+
+npm_link_all_packages(name = "node_modules")
+
+next_bin.next_binary(
+    name = "next_js_binary",
+    visibility = ["//visibility:public"],
+)
+
+next(
+    name = "next",
+    srcs = [
+        "//src/frontend/pages",
+        "//src/frontend/public",
+        "//src/frontend/components",
+        "//src/frontend/lib",
+        "//src/frontend/posts",
+        "//src/frontend/styles",
+    ],
+    data = [
+        "next-env.d.ts",
+        "package.json",
+        ":node_modules/next",
+        ":node_modules/date-fns",
+        ":node_modules/gray-matter",
+        ":node_modules/react",
+        ":node_modules/react-dom",
+        ":node_modules/typescript",
+        ":node_modules/remark",
+        ":node_modules/remark-html",
+        ":node_modules/@types/node",
+        ":node_modules/@types/react", ],
+    next_bin = "/node_modules/.bin/next",
+    next_js_binary = "//src/frontend:next_js_binary",
+)
+
+ts_config(
+    name = "tsconfig",
+    src = "tsconfig.json",
+    visibility = ["//visibility:public"],
+)

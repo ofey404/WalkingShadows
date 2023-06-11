@@ -1,0 +1,29 @@
+load("@aspect_rules_ts//ts:defs.bzl", "ts_project")
+
+SRCS = glob([
+    "**/*.tsx",
+    "**/*.ts",
+])
+
+ts_project(
+    name = "lib",
+    srcs = SRCS,
+    allow_js = True,
+    declaration = True,
+    incremental = True,
+    preserve_jsx = True,
+    resolve_json_module = True,
+    tsconfig = "//src/frontend:tsconfig",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//src/frontend:node_modules/date-fns",
+        "//src/frontend:node_modules/gray-matter",
+        "//src/frontend:node_modules/next",
+        "//src/frontend:node_modules/react",
+        "//src/frontend:node_modules/react-dom",
+        "//src/frontend:node_modules/remark",
+        "//src/frontend:node_modules/remark-html",
+        "//src/frontend:node_modules/typescript",
+        "//src/frontend:node_modules/@types/node",
+    ],
+)
