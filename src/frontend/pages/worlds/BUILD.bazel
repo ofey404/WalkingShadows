@@ -16,5 +16,6 @@ ts_project(
         "//src/frontend:node_modules/next",
         "//src/frontend/components",
         "//src/frontend/lib",
+        "//src/frontend:node_modules/@types/react",
     ],
 )
