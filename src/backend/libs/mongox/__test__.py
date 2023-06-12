@@ -11,6 +11,7 @@ class TestDocument(Document):
 
 
 class TestMongo(unittest.IsolatedAsyncioTestCase):
+    # FIXME: Use a local mongodb instance
     async def test_insert(self):
         with MongoDbContainer(MONGO_CONTAINER_VERSION) as mongo:
             await mongox.init(
