@@ -1,0 +1,6 @@
+# compatibility of image build on MacOS
+run --@io_bazel_rules_docker//transitions:enable=false
+build --@io_bazel_rules_docker//transitions:enable=false
+test --@io_bazel_rules_docker//transitions:enable=false
+
+test --test_output=errors

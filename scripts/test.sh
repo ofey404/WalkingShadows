@@ -14,5 +14,4 @@ fi
 
 bazel test //src/backend/... \
            --test_env=OPENAI_API_KEY="${OPENAI_API_KEY}" \
-           --test_output=errors \
            "$@"

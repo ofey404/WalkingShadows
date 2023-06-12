@@ -7,7 +7,7 @@ PROJECT_ROOT="${SCRIPT_DIR}/.."
 
 cd "$PROJECT_ROOT"
 
-bazel run --@io_bazel_rules_docker//transitions:enable=false -c dbg //src/backend/services/world:image -- --norun
+bazel run -c dbg //src/backend/services/world:image -- --norun
 
 echo "## Tag image as walkingshadows-world:latest ##"
 docker tag bazel/src/backend/services/world:image ws-world:latest
