@@ -44,3 +44,4 @@ services:
     depends_on:
       - mongo
       - redis-stack
+# TODO: frontend + nginx ingress
